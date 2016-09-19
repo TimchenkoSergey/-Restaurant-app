@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>ToDo</title>
+	
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=cyrillic" rel="stylesheet">
+	<link href="css/main.min.css" rel="stylesheet">
+
+	<script src="libs/angular/angular.min.js"></script>
+	<script src="js/main.js"></script>
+	<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="page">
+	<header class="header">
+		<div class="header__container">
+			<div class="logo">
+				<a href="#" class="logo__link">
+					<svg class="logo__image" xmlns="http://www.w3.org/2000/svg" width="195" height="50" viewBox="0 0 194.6 50" fill="#FFF">
+						<path class="logo__path" d="M0 0h194.6v2H0z"/>
+						<path class="logo__path" d="M193 0h2v50h-2z"/>
+						<path class="logo__path" d="M0 48h194.6v2H0z"/>
+						<path class="logo__path" d="M0 0h2v50H0z"/>
+						<path class="logo__path" d="M173.2 20.8a4.3 4.3 0 0 0-1.6-1.1c-0.6-0.3-1.4-0.4-2.2-0.4-0.8 0-1.5-2.2-0.6-1.2-1.6 1.2s-0.8 1.1-1 1.8-0.3 1.5-0.3 2.4c0 0.9 1.7 2.4s0.6 1.3 1 1.8 1.6 1.1c0.6 1.4 2.2 0 1.5-0.1 2.2-0.4-0.3 1.2-0.6 1.6-1.1s0.8-1.1 1-1.8c0.2-0.7-1.5-2.4 0-0.9-0.1-1.7-0.3-2.4-0.2-0.7-0.6-1.3-1-1.8zM58.3 21.1c-0.1-0.4-0.3-0.9-0.4-1.4a20.7 20.7 0 0 1-0.8 2.5l-1.7 5h5l-1.7-5c-0.1-0.3-0.3-0.7-0.4-1.1z"/>
+						<path class="logo__path" d="M6 6v38h183V6H6zm21.7 13.3h-7.5v4.6h6.2v3.3h-6.2v7.1h-4.2V16H27.7v3.3zm17.2 15H33.9V16h4.2V30.8h6.8v3.4zm19 0c-0.4 0-0.7-0.1-0.9-0.3a1.6 1.6 0 0 1-0.5-0.7l-1.1-3.2h-6.9l-1.1 3.2a1.5 1.5 0 0 1-0.5c-0.2-0.5-0.9h-3.3l7.1-18.2h4.3l7.1 18.2h-3.3zm28.9 0h-3.7V23.7c0-0.2-0.5-0.8s0-0.6-0.9l-4.8 9.4c-0.1-0.4-0.6-0.3-0.5-0.9h-0.6c-0.3 0-0.6-0.1-0.9-0.2a1.6 1.6 0 0 1-0.6-0.7l-4.8-9.4c0v10.5H72.3V16h3.2c0.2 0 0.3a0.9 0 0 1 0.3c0.1l4.7 9.2c0.2 1.1A25.6 25.6 0 0 1 83 26.9c0.2-0.3-0.7-1l4.7-9.2c0.1-0.2-0.3-0.4-0.1-0.1-0.2s0.2-0.1-0.1c0.1 0 0 0h3.2v18.2zm19-15h-7.5v4.3h5.7v3.1h-5.7v4.3h7.5v3.3h-11.7V16h11.7v3.3zm22.3 15h-2.2c-0.3 0-0.6-0.1-0.8-0.2s-0.4-0.3-0.7-0.5l-8.6-10.9c0v9.8h-3.7V16h2.2c0.2 0 0.3a1.1 1.1 0 0 1 0.6c0.1l8.7 10.9a17 17 0 0 1-0.1-1.9v-9.6h3.7v18.2h0zm19.1-0.5c-1.1-2.4-3.9-1.4 0-2.6-0.2-3.7-0.7-1.1-0.5-2-1.1-2.8-1.9-0.8-0.8-1.3-1.8-1.8-2.9s-0.6-2.4-0.6-3.7c0-1.4-2.6-3.7a8.7 8.7 0 0 1 1.9-2.9 8.4 8.4 0 0 1 2.9-1.9c1.1-0.5 2.3-0.7 3.7-0.7 0 1.3 1.9s1.2 1.7a7.8 7.8 0 0 1 2.6 1.7l-1.4 1.9c-0.1-0.2-0.3-0.1-0.3-0.5a0.9 0 0 1-0.4-0.1 4.4 4.4 0 0 1-0.4-0.2l-0.5-0.3c-0.2-0.1-0.4-0.2-0.6-0.3s-0.5-0.2-0.9-0.2-0.7-0.1-1.2-0.1c-0.7 0-1.3-1.9-0.6-1.1-1.5 1.1s-0.7 1.1-1 1.8-0.3 1.5-0.3 2.5c0 0.9 1.8 2.5 1.3 1 1.8s0.9 1.5 1.1c0.6 1.2 1.9 0 0.7 0 1.1-0.1 0-0.1-0.2-0.1-0.2-0.3a4.9 4.9 0 0 0 0.7-0.6c0.1-0.1-0.2-0.2a0.9 0 0 1 0.7 0c0.1l1.7 1.8a7 7 0 0 1-2.8 2.2zm25.1-4.9a8.9 8.9 0 0 1-1.9 3c-0.8-1.8 1.5-3 2-1.2-2.4-3.9s-2.7-0.2-3.9-0.7-2.2-1.1-3-2-1.5-1.8-1.9-3c-0.5-1.1-0.7-2.4-0.7-3.7s0.2-2.5-3.7a8.7 8.7 0 0 1 1.9-2.9c0.8-0.8 1.8-1.5 3-2s2.5-0.7 3.9-0.7 2.7 3.9c1.2 2.2 1.1 3 2a8.8 8.8 0 0 1 1.9 3c0.5 1.1 2.4 3.7 0 1.3-0.2 2.5-0.7 3.7z"/>
+					</svg>
+				</a>
+			</div>
+			<nav class="menu">
+				<ul class="menu__list">
+					<li class="menu__item">
+						<a class="menu__link" href="#">Главная</a>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link" href="#meal">Блюда</a>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link" href="#basket">
+							Корзина
+							<svg class="menu__icon" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+								<path class="menu__path" d="M496 0h-80c-7.7 0-14.3 5.5-15.7 13.1L391 64H16c-5.3 0-10.3 2.7-13.3 7.1s-3.5 10.1-1.5 15l80 192C83.7 284.1 89.5 288 96 288h254.3l-11.6 64H128c-8.8 0-16 7.2-16 16s7.2 16 16 16h224c7.7 0 14.3-5.5 15.8-13.1L429.3 32H496c8.8 0 16-7.2 16-16S504.8 0 496 0zM385.2 96l-11.6 64H288V96H385.2zM256 96v64h-64V96H256zM160 96v64H66.7L40 96H160zM106.7 256L80 192h80v64H106.7zM192 256v-64h64v64H192zM288 256v-64h79.8l-11.7 64H288z"/>
+								<path class="menu__path" d="M176 416c-26.5 0-48 21.5-48 48s21.5 48 48 48 48-21.5 48-48S202.5 416 176 416z"/>
+								<path class="menu__path" d="M304 416c-26.5 0-48 21.5-48 48s21.5 48 48 48 48-21.5 48-48S330.5 416 304 416z"/>
+							</svg>
+						</a>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link" href="#footer">Контакты</a>
+					</li>
+				</ul>
+			</nav>
+			<section class="header__description">
+				<h1 class="header__caption">
+					Ресторан и клуб <br>
+					незабываемые впечатления и вкусы
+				</h1>
+				<p class="header__text">
+					Flamenco - секрет, чтобы сделать жизнь лучше
+				</p>
+			</section>
+		</div>
+	</header>
+</body>
+</html>
