@@ -49,13 +49,23 @@
 		max-width: 100%;
 		height: auto;
 
+		cursor: pointer;
+
 		&:hover {
 			transform: scale(1.1);
     		transition: all 0.5s;
 		}
 	}
 
+	&__price {
+		color: #666;
+		font-size: 16px;
+	}
+
 	&__name {
 		margin-bottom: 60px;
+
+		color: #666;
+		font-size: 18px;
 	}
 }
