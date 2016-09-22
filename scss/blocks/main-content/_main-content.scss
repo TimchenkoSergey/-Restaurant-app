@@ -35,6 +35,8 @@
 		display: inline-block;
 		margin-right: 25px;
 
+		cursor: pointer;
+
 		&:nth-child(3n) {
 			margin-right: 0;
 		}
@@ -47,8 +49,6 @@
 	&__picture {
 		max-width: 100%;
 		height: auto;
-
-		cursor: pointer;
 
 		&:hover {
 			transform: scale(1.1);

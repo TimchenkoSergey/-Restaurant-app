@@ -1,18 +1,19 @@
 <div class="meal-page" ng-cloak>
-	<div class="meal-page__picture">
-		<img class="meal-page__image" ng-src="{{currentMeal.image}}" alt="meal">
-	</div>
-	<div class="meal-page__description">
-		<p class="meal-page__price">
-			{{currency+currentMeal.price}}
-		</p>
-		<p class="meal-page__name">
-			{{currentMeal.name}}
-		</p>
-		<p class="meal-page__comment">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, placeat! At quisquam quam pariatur culpa non deserunt id perferendis corporis, laborum ut omnis beatae suscipit, dolores cum molestias quaerat labore.
-		</p>
-		<div class="meal-page__count">
+    <div class="meal-page__wrap">
+       <div class="meal-page__picture">
+          <img class="meal-page__image" ng-src="{{currentMeal.image}}" alt="meal">
+      </div>
+      <div class="meal-page__description">
+          <p class="meal-page__price">
+             {{currency+currentMeal.price}}
+         </p>
+         <p class="meal-page__name">
+             {{currentMeal.name}}
+         </p>
+         <p class="meal-page__comment">
+             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, placeat! At quisquam quam pariatur culpa non deserunt id perferendis corporis, laborum ut omnis beatae suscipit, dolores cum molestias quaerat labore. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, placeat! Laboriosam impedit tenetur, iusto deserunt sint qui possimus inventore perspiciatis voluptatibus incidunt, fugit in. Quisquam fugit dolorum quibusdam, iste quis.
+         </p>
+         <div class="meal-page__count">
             <ul class="meal-page__list">
                 <li class="meal-page__item">1</li>
                 <li class="meal-page__item">2</li>
@@ -34,5 +35,6 @@
                 <button class="meal-page__button" ng-click="saveMeal()" ng-show="mealStatus === 'edit'">Save</button>
             </div>
         </div>
-	</div>
+    </div>
+    </div>
 </div>
