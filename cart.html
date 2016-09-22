@@ -1,0 +1,35 @@
+<div class="cart">
+	<div class="cart__header">
+		<h1 class="cart__head">Корзина</h1>
+		<button class="cart__menu">Главная</button>
+	</div>
+	<div class="cart__content">
+		<div class="cart__empty" ng-hide="cart">
+			Корзина пуста
+		</div>
+		<div class="cart__items" ng-show="cart">
+			<ul class="cart__list">
+				<li class="cart__item" ng-repeat="item in cart">
+					<div class="cart__element">
+						{{item.name}} x {{item.amount}}
+						<div class="cart__edit" ng-click="editItem(item)">
+							<img src="" alt="edit">
+						</div>
+						<div class="cart__price">
+							{{currency + item.price}}
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="cart__totals">
+		<div class="cart__text">Итог</div>
+		<div class="cart__total-price">
+			{{currency + total}}
+		</div>
+	</div>
+	<div class="cart__checkout">
+		<button class="cart__button">Оплатить</button>
+	</div>
+</div>

@@ -124,4 +124,16 @@ angular.module("Meals", [])
 			};
 		}
 	};
+})
+
+.directive("cart", function (mealsFactory) {
+    return {
+        restrict : "E",
+        replace : true,
+        templateUrl : "cart.html",
+        scope : {},
+        controller : function ($scope) {
+            
+        }
+    };
 });
