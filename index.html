@@ -18,7 +18,7 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body class="page">
+<body class="page" >
 	<header class="header">
 		<div class="header__container">
 			<div class="logo">
@@ -69,15 +69,14 @@
 			</section>
 		</div>
 	</header>
-	<main class="main-content" id="meal">
+	<main class="main-content" id="meal" ng-controller="mealsListCtrl">
 		<div class="main-content__wrap">
 			<div class="main-content__header">
 				Наши лучшие блюда
 			</div>
 			<div class="main-content__line main-content__line--margin"></div>
-
-			<div class="main-content__meals" ng-controller="mealsListCtrl">
-				<div class="main-content__meal" ng-repeat="meal in products">
+			<div class="main-content__meals"  ng-if="!open">
+				<div class="main-content__meal" ng-repeat="meal in products" ng-click="openMeal(meal)">
 					<div class="main-content__image">
 						<img class="main-content__picture" ng-src="{{ meal.image }}" alt="meal">
 					</div>
@@ -91,6 +90,7 @@
 				</div>
 			</div>
 		</div>
+		<meal ng-if="open"></meal>
 	</main>
 	<footer class="footer" id="footer">
 		<div class="logo">

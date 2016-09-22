@@ -1,0 +1,38 @@
+<div class="meal-page" ng-cloak>
+	<div class="meal-page__picture">
+		<img class="meal-page__image" ng-src="{{currentMeal.image}}" alt="meal">
+	</div>
+	<div class="meal-page__description">
+		<p class="meal-page__price">
+			{{currency+currentMeal.price}}
+		</p>
+		<p class="meal-page__name">
+			{{currentMeal.name}}
+		</p>
+		<p class="meal-page__comment">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, placeat! At quisquam quam pariatur culpa non deserunt id perferendis corporis, laborum ut omnis beatae suscipit, dolores cum molestias quaerat labore.
+		</p>
+		<div class="meal-page__count">
+            <ul class="meal-page__list">
+                <li class="meal-page__item">1</li>
+                <li class="meal-page__item">2</li>
+                <li class="meal-page__item">3</li>
+                <li class="meal-page__item">4</li>
+                <li class="meal-page__item">5</li>
+            </ul>
+        </div>
+        <div class="meal-page__modifiers">
+
+        </div>
+        <div class="meal-page__buttons">
+            <div class="meal-page__left">
+                <button class="meal-page__button" ng-click="cencel()" ng-show="mealStatus === 'new'">Cencel</button>
+                <button class="meal-page__button" ng-click="removeMeal()" ng-show="mealStatus === 'edit'">Remove</button>
+            </div>
+            <div class="meal-page__right">
+                <button class="meal-page__button" ng-click="addMeal()" ng-show="mealStatus === 'new'">Add to Cart</button>
+                <button class="meal-page__button" ng-click="saveMeal()" ng-show="mealStatus === 'edit'">Save</button>
+            </div>
+        </div>
+	</div>
+</div>
