@@ -98,22 +98,30 @@ angular.module("Meals", [])
 			$scope.selectAmount = mealsFactory.getCurrentMealAmount();
 			$scope.mealStatus   = mealsFactory.getCurrentMealStatus();
 			$scope.open         = mealsFactory.getOpenMeal();
-			
+
+            $scope.selectNum = function (num) {
+                $scope.selectAmount = num;
+            };
+
+            $scope.activeNum = function (num) {
+                return $scope.selectAmount === num;
+            };
+
 			$scope.cencel = function () {
 				
-			}
+			};
 			
 			$scope.removeMeal = function () {
 				
-			}
+			};
 			
 			$scope.addMeal = function () {
 				
-			}
+			};
 			
 			$scope.saveMeal = function () {
 				
-			}
+			};
 		}
 	};
 });
