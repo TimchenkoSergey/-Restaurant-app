@@ -64,8 +64,66 @@ angular.module("Meals", [])
 
 		getCurrentMealAmount : function () {
 			return currentAmount;
-		}
+		},
+        
+        setCurrentMealById : function (id) {
+            for(let i = 0, len = meals.products.length; i < len; i++) {
+                if(meals.products[i].id == id) {
+                    currentMeal = meals.products[i];
+                    return true;
+                }
+            }
+
+            return false;
+        }
 	};
+})
+
+.factory("cartFactory", function () {
+    let cartList = [];
+    
+    return {
+        getCartCount : function () {
+            return cartList.length;
+        },
+        
+        addItemToCartList : function (item, amount) {
+            let newItem = {};
+
+            newItem.id     = item.id;
+            newItem.name   = item.name;
+            newItem.price  = item.price;
+            newItem.amount = amount;
+
+            cartList.push(newItem);
+        },
+
+        getCartList : function () {
+            return cartList;
+        },
+
+        getTotal : function () {
+            let total = 0;
+
+            if(cartList.length > 0) {
+                for(let i = 0, len = cartList.length; i < len; i++) {
+                    total += cartList[i].price * cartList[i].amount;
+                }
+            }
+
+            return total.toFixed(2);
+        },
+
+        removeMeal : function (meal) {
+            for(let i = 0, len = cartList.length; i < len; i++) {
+                if(cartList[i].id === meal.id) {
+                    cartList.splice(i, 1);
+                    return true;
+                }
+            }
+            return false;
+        }
+    };
 })
 
 .controller("mealsListCtrl", function ($scope, $rootScope, mealsFactory) {
@@ -90,7 +148,7 @@ angular.module("Meals", [])
 	};
 })
 
-.directive("meal",function (mealsFactory) {
+.directive("meal",function (mealsFactory, cartFactory) {
 	return {
 		restrict : "E",
 		replace : true,
@@ -101,7 +159,7 @@ angular.module("Meals", [])
 			$scope.currency     = mealsFactory.getCurrency();
 			$scope.selectAmount = mealsFactory.getCurrentMealAmount();
 			$scope.mealStatus   = mealsFactory.getCurrentMealStatus();
-            $scope.count        = 0;
+            $scope.cartCount    = cartFactory.getCartCount();
 
             $scope.$on("openPage", function () {
                 $scope.open = mealsFactory.getOpenPage();
@@ -124,32 +182,56 @@ angular.module("Meals", [])
                 mealsFactory.setOpenPage("cart");
                 $rootScope.$broadcast("openPage");
             };
-
-			$scope.removeMeal = function () {
-				
-			};
 			
 			$scope.addMeal = function () {
-				
+                cartFactory.addItemToCartList($scope.currentMeal, $scope.selectAmount);
+                $scope.openCart();
 			};
+
+            $scope.removeMeal = function () {
+                cartFactory.removeMeal($scope.currentMeal);
+                $scope.openCart();
+            };
 			
 			$scope.saveMeal = function () {
-				
+				cartFactory.removeMeal($scope.currentMeal);
+                $scope.addMeal();
 			};
 		}
 	};
 })
 
-.directive("cart", function (mealsFactory) {
+.directive("cart", function (mealsFactory, cartFactory) {
     return {
         restrict : "E",
         replace : true,
         templateUrl : "cart.html",
         scope : {},
         controller : function ($scope, $rootScope) {
+            $scope.currency = mealsFactory.getCurrency();
+            $scope.cartList = cartFactory.getCartList();
+            $scope.total    = cartFactory.getTotal();
+
             $scope.$on("openPage", function () {
                 $scope.open = mealsFactory.getOpenPage();
             });
+
+            $scope.openMain = function () {
+                mealsFactory.setOpenPage("main");
+                $rootScope.$broadcast("openPage");
+            };
+            
+            $scope.editMeal = function (meal) {
+                let mealSelected = mealsFactory.setCurrentMealById(meal.id);
+
+                if(mealSelected) {
+                    mealsFactory.setCurrentMealAmount(meal.amount);
+                    mealsFactory.setCurrentMealStatus("edit");
+                    mealsFactory.setOpenPage("meal");
+                    $rootScope.$broadcast("openPage");
+                    console.log(mealsFactory.getOpenPage());
+                }
+            };
         }
     };
 });
