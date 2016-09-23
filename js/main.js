@@ -1,6 +1,6 @@
 angular.module("Meals", [])
 
-.factory("mealsFactory", function ($http, $q) {
+.factory("mealsFactory", function ($http, $q, $rootScope) {
 	let mealApiUrl        = "meals.json",
 		meals             = null,
 		currency          = "",
@@ -10,12 +10,17 @@ angular.module("Meals", [])
 		openPage          = "main";
 
 	return {
+        openPage : function (page) {
+            this.setOpenPage(page);
+            $rootScope.$broadcast("openPage");
+        },
+
 		getOpenPage : function () {
 			return openPage;
 		},
 
-		setOpenPage : function (str) {
-            openPage = str;
+		setOpenPage : function (page) {
+            openPage = page;
 		},
 
 		getMeals : function () {
@@ -67,6 +72,7 @@ angular.module("Meals", [])
 		},
         
         setCurrentMealById : function (id) {
+
             for(let i = 0, len = meals.products.length; i < len; i++) {
                 if(meals.products[i].id == id) {
                     currentMeal = meals.products[i];
@@ -83,26 +89,26 @@ angular.module("Meals", [])
     let cartList = [];
     
     return {
-        getCartCount : function () {
+        getCartListCount : function () {
             return cartList.length;
         },
         
-        addItemToCartList : function (item, amount) {
-            let newItem = {};
+        addMealToCartList : function (meal, amount) {
+            let newMeal = {};
 
-            newItem.id     = item.id;
-            newItem.name   = item.name;
-            newItem.price  = item.price;
-            newItem.amount = amount;
+            newMeal.id     = meal.id;
+            newMeal.name   = meal.name;
+            newMeal.price  = meal.price;
+            newMeal.amount = amount;
 
-            cartList.push(newItem);
+            cartList.push(newMeal);
         },
 
         getCartList : function () {
             return cartList;
         },
 
-        getTotal : function () {
+        getTotalPrice : function () {
             let total = 0;
 
             if(cartList.length > 0) {
@@ -115,6 +121,7 @@ angular.module("Meals", [])
         },
 
         removeMeal : function (meal) {
+
             for(let i = 0, len = cartList.length; i < len; i++) {
                 if(cartList[i].id === meal.id) {
                     cartList.splice(i, 1);
@@ -126,7 +133,7 @@ angular.module("Meals", [])
     };
 })
 
-.controller("mealsListCtrl", function ($scope, $rootScope, mealsFactory) {
+.controller("mealsListCtrl", function ($scope, mealsFactory) {
     $scope.open = mealsFactory.getOpenPage();
 
     $scope.$on("openPage", function () {
@@ -143,8 +150,7 @@ angular.module("Meals", [])
 		mealsFactory.setCurrentMeal(meal);
 		mealsFactory.setCurrentMealStatus("new");
 		mealsFactory.setCurrentMealAmount(1);
-		mealsFactory.setOpenPage("meal");
-        $rootScope.$broadcast("openPage");
+		mealsFactory.openPage("meal");
 	};
 })
 
@@ -154,12 +160,12 @@ angular.module("Meals", [])
 		replace : true,
 		templateUrl : "meal.html",
 		scope : {},
-		controller : function ($scope, $rootScope) {
+		controller : function ($scope) {
 			$scope.currentMeal  = mealsFactory.getCurrentMeal();
 			$scope.currency     = mealsFactory.getCurrency();
 			$scope.selectAmount = mealsFactory.getCurrentMealAmount();
 			$scope.mealStatus   = mealsFactory.getCurrentMealStatus();
-            $scope.cartCount    = cartFactory.getCartCount();
+            $scope.cartCount    = cartFactory.getCartListCount();
 
             $scope.$on("openPage", function () {
                 $scope.open = mealsFactory.getOpenPage();
@@ -174,23 +180,21 @@ angular.module("Meals", [])
             };
 
 			$scope.cencel = function () {
-                mealsFactory.setOpenPage("main");
-                $rootScope.$broadcast("openPage");
+                mealsFactory.openPage("main");
 			};
 
             $scope.openCart = function () {
-                mealsFactory.setOpenPage("cart");
-                $rootScope.$broadcast("openPage");
+                mealsFactory.openPage("cart");
             };
 			
 			$scope.addMeal = function () {
-                cartFactory.addItemToCartList($scope.currentMeal, $scope.selectAmount);
-                $scope.openCart();
+                cartFactory.addMealToCartList($scope.currentMeal, $scope.selectAmount);
+                mealsFactory.openPage("cart");
 			};
 
             $scope.removeMeal = function () {
                 cartFactory.removeMeal($scope.currentMeal);
-                $scope.openCart();
+                mealsFactory.openPage("cart");
             };
 			
 			$scope.saveMeal = function () {
@@ -207,18 +211,17 @@ angular.module("Meals", [])
         replace : true,
         templateUrl : "cart.html",
         scope : {},
-        controller : function ($scope, $rootScope) {
+        controller : function ($scope) {
             $scope.currency = mealsFactory.getCurrency();
             $scope.cartList = cartFactory.getCartList();
-            $scope.total    = cartFactory.getTotal();
+            $scope.total    = cartFactory.getTotalPrice();
 
             $scope.$on("openPage", function () {
                 $scope.open = mealsFactory.getOpenPage();
             });
 
             $scope.openMain = function () {
-                mealsFactory.setOpenPage("main");
-                $rootScope.$broadcast("openPage");
+                mealsFactory.openPage("main");
             };
             
             $scope.editMeal = function (meal) {
@@ -227,9 +230,7 @@ angular.module("Meals", [])
                 if(mealSelected) {
                     mealsFactory.setCurrentMealAmount(meal.amount);
                     mealsFactory.setCurrentMealStatus("edit");
-                    mealsFactory.setOpenPage("meal");
-                    $rootScope.$broadcast("openPage");
-                    console.log(mealsFactory.getOpenPage());
+                    mealsFactory.openPage("meal");
                 }
             };
         }
