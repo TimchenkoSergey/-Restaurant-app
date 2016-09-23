@@ -3,6 +3,19 @@
 	&__wrap {
 		max-width: 1100px;
 		margin: 0 auto;
+		position: relative;
+	}
+
+	&__cart {
+		position: absolute;
+		right: 100px;
+	}
+
+	&__icon {
+		width: 20px;
+		height: 20px;
+
+		fill: #666;
 	}
 
 	&__image {

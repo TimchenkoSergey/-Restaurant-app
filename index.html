@@ -69,13 +69,13 @@
 			</section>
 		</div>
 	</header>
-	<main class="main-content" id="meal" ng-controller="mealsListCtrl">
+	<main class="main-content" id="meal" ng-controller="mealsListCtrl" ng-cloak>
 		<div class="main-content__wrap">
 			<div class="main-content__header">
 				Наши лучшие блюда
 			</div>
 			<div class="main-content__line main-content__line--margin"></div>
-			<div class="main-content__meals"  ng-if="!open">
+			<div class="main-content__meals" ng-if="open === 'main'">
 				<div class="main-content__meal" ng-repeat="meal in products" ng-click="openMeal(meal)">
 					<div class="main-content__image">
 						<img class="main-content__picture" ng-src="{{ meal.image }}" alt="meal">
@@ -90,8 +90,8 @@
 				</div>
 			</div>
 		</div>
-		<meal ng-if="open"></meal>
-		<cart></cart>
+		<meal ng-if="open === 'meal'"></meal>
+		<cart ng-if="open === 'cart'"></cart>
 	</main>
 	<footer class="footer" id="footer">
 		<div class="logo">

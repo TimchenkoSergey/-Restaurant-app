@@ -7,15 +7,15 @@ angular.module("Meals", [])
 		currentMeal       = null,
 		currentMealStatus = "new",
 		currentAmount     = 1,
-		openMeal          = false;
+		openPage          = "main";
 
 	return {
-		getOpenMeal : function () {
-			return openMeal;
+		getOpenPage : function () {
+			return openPage;
 		},
 
-		setOpenMeal : function (flag) {
-			openMeal = flag;
+		setOpenPage : function (str) {
+            openPage = str;
 		},
 
 		getMeals : function () {
@@ -68,9 +68,13 @@ angular.module("Meals", [])
 	};
 })
 
-.controller("mealsListCtrl", function ($scope, mealsFactory) {
-	$scope.open = mealsFactory.getOpenMeal();
-	
+.controller("mealsListCtrl", function ($scope, $rootScope, mealsFactory) {
+    $scope.open = mealsFactory.getOpenPage();
+
+    $scope.$on("openPage", function () {
+        $scope.open = mealsFactory.getOpenPage();
+    });
+
 	mealsFactory.getMeals()
 		.then(function (mealsObj) {
 			$scope.currency = mealsObj.currency;
@@ -81,8 +85,8 @@ angular.module("Meals", [])
 		mealsFactory.setCurrentMeal(meal);
 		mealsFactory.setCurrentMealStatus("new");
 		mealsFactory.setCurrentMealAmount(1);
-		mealsFactory.setOpenMeal(true);
-		$scope.open = mealsFactory.getOpenMeal();
+		mealsFactory.setOpenPage("meal");
+        $rootScope.$broadcast("openPage");
 	};
 })
 
@@ -92,12 +96,16 @@ angular.module("Meals", [])
 		replace : true,
 		templateUrl : "meal.html",
 		scope : {},
-		controller : function ($scope) {
+		controller : function ($scope, $rootScope) {
 			$scope.currentMeal  = mealsFactory.getCurrentMeal();
 			$scope.currency     = mealsFactory.getCurrency();
 			$scope.selectAmount = mealsFactory.getCurrentMealAmount();
 			$scope.mealStatus   = mealsFactory.getCurrentMealStatus();
-			$scope.open         = mealsFactory.getOpenMeal();
+            $scope.count        = 0;
+
+            $scope.$on("openPage", function () {
+                $scope.open = mealsFactory.getOpenPage();
+            });
 
             $scope.selectNum = function (num) {
                 $scope.selectAmount = num;
@@ -108,9 +116,15 @@ angular.module("Meals", [])
             };
 
 			$scope.cencel = function () {
-				
+                mealsFactory.setOpenPage("main");
+                $rootScope.$broadcast("openPage");
 			};
-			
+
+            $scope.openCart = function () {
+                mealsFactory.setOpenPage("cart");
+                $rootScope.$broadcast("openPage");
+            };
+
 			$scope.removeMeal = function () {
 				
 			};
@@ -132,8 +146,10 @@ angular.module("Meals", [])
         replace : true,
         templateUrl : "cart.html",
         scope : {},
-        controller : function ($scope) {
-            
+        controller : function ($scope, $rootScope) {
+            $scope.$on("openPage", function () {
+                $scope.open = mealsFactory.getOpenPage();
+            });
         }
     };
 });
