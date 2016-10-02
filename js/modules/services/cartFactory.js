@@ -1,4 +1,4 @@
-app.factory("cartFactory", function () {
+app.factory("CartFactory", function () {
     let cartList = [];
     
     return {

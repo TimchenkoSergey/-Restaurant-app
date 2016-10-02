@@ -1,26 +1,12 @@
-app.factory("mealsFactory", function ($http, $q, $rootScope) {
+app.factory("MealsFactory", function ($http, $q) {
 	let mealApiUrl        = "meals.json",
 		meals             = null,
 		currency          = "",
 		currentMeal       = null,
 		currentMealStatus = "new",
-		currentAmount     = 1,
-		openPage          = "main";
+		currentAmount     = 1;
 
 	return {
-        openPage : function (page) {
-            this.setOpenPage(page);
-            $rootScope.$broadcast("openPage");
-        },
-
-		getOpenPage : function () {
-			return openPage;
-		},
-
-		setOpenPage : function (page) {
-            openPage = page;
-		},
-
 		getMeals : function () {
 			let deferred = $q.defer();
 

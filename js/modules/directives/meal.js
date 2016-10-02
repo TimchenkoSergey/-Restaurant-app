@@ -1,19 +1,15 @@
-app.directive("meal",function (mealsFactory, cartFactory) {
+app.directive("meal",function (MealsFactory, CartFactory) {
 	return {
 		restrict : "E",
 		replace : true,
 		templateUrl : "meal.html",
 		scope : {},
 		controller : function ($scope) {
-			$scope.currentMeal  = mealsFactory.getCurrentMeal();
-			$scope.currency     = mealsFactory.getCurrency();
-			$scope.selectAmount = mealsFactory.getCurrentMealAmount();
-			$scope.mealStatus   = mealsFactory.getCurrentMealStatus();
-            $scope.cartCount    = cartFactory.getCartListCount();
-
-            $scope.$on("openPage", function () {
-                $scope.open = mealsFactory.getOpenPage();
-            });
+			$scope.currentMeal  = MealsFactory.getCurrentMeal();
+			$scope.currency     = MealsFactory.getCurrency();
+			$scope.selectAmount = MealsFactory.getCurrentMealAmount();
+			$scope.mealStatus   = MealsFactory.getCurrentMealStatus();
+            $scope.cartCount    = CartFactory.getCartListCount();
 
             $scope.selectNum = function (num) {
                 $scope.selectAmount = num;
@@ -22,28 +18,18 @@ app.directive("meal",function (mealsFactory, cartFactory) {
             $scope.activeNum = function (num) {
                 return $scope.selectAmount === num;
             };
-
-			$scope.cencel = function () {
-                mealsFactory.openPage("main");
-			};
-
-            $scope.openCart = function () {
-                mealsFactory.openPage("cart");
-            };
 			
 			$scope.addMeal = function () {
-                cartFactory.addMealToCartList($scope.currentMeal, $scope.selectAmount);
-                mealsFactory.openPage("cart");
+                CartFactory.addMealToCartList($scope.currentMeal, $scope.selectAmount);
 			};
 
             $scope.removeMeal = function () {
-                cartFactory.removeMeal($scope.currentMeal);
-                mealsFactory.openPage("cart");
+                CartFactory.removeMeal($scope.currentMeal);
             };
 			
 			$scope.saveMeal = function () {
-				cartFactory.removeMeal($scope.currentMeal);
-                $scope.addMeal();
+				CartFactory.removeMeal($scope.currentMeal);
+                CartFactory.addMealToCartList($scope.currentMeal, $scope.selectAmount);
 			};
 		}
 	};
