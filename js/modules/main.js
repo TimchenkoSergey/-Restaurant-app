@@ -10,7 +10,7 @@ let app = angular.module("Meals", ["ngRoute"])
         });
 
         $routeProvider.when("/", {
-            templateUrl: "main.html"
+            templateUrl: "views/mealsList.html"
         });
 
         $routeProvider.otherwise({redirectTo: "/"});

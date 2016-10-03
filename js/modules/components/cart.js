@@ -1,7 +1,7 @@
 app.component("cartPage", {
     restrict : "E",
     replace : true,
-    templateUrl : "component_templates/cart.html",
+    templateUrl : "component_templates/cartPage.html",
     bindings : {},
     controllerAs : "cart",
     controller : function (MealsFactory, CartFactory) {
