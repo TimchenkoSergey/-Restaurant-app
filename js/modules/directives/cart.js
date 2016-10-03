@@ -1,24 +1,23 @@
-app.directive("cart", function (MealsFactory, CartFactory) {
-    return {
-        restrict : "E",
-        replace : true,
-        templateUrl : "cart.html",
-        scope : {},
-        controller : function ($scope) {
-            
-            $scope.currency = MealsFactory.getCurrency();
-            $scope.cartList = CartFactory.getCartList();
-            $scope.total    = CartFactory.getTotalPrice();
+app.component("cartPage", {
+    restrict : "E",
+    replace : true,
+    templateUrl : "cart.html",
+    bindings : {},
+    controllerAs : "cart",
+    controller : function (MealsFactory, CartFactory) {
 
-            
-            $scope.editMeal = function (meal) {
-                let mealSelected = MealsFactory.setCurrentMealById(meal.id);
+        this.currency = MealsFactory.getCurrency();
+        this.cartList = CartFactory.getCartList();
+        this.total    = CartFactory.getTotalPrice();
 
-                if(mealSelected) {
-                    MealsFactory.setCurrentMealAmount(meal.amount);
-                    MealsFactory.setCurrentMealStatus("edit");
-                }
-            };
-        }
-    };
+
+        this.editMeal = function (meal) {
+            let mealSelected = MealsFactory.setCurrentMealById(meal.id);
+
+            if(mealSelected) {
+                MealsFactory.setCurrentMealAmount(meal.amount);
+                MealsFactory.setCurrentMealStatus("edit");
+            }
+        };
+    }
 });
