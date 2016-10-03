@@ -1,36 +1,38 @@
-app.directive("meal",function (MealsFactory, CartFactory) {
-	return {
-		restrict : "E",
-		replace : true,
-		templateUrl : "meal.html",
-		scope : {},
-		controller : function ($scope) {
-			$scope.currentMeal  = MealsFactory.getCurrentMeal();
-			$scope.currency     = MealsFactory.getCurrency();
-			$scope.selectAmount = MealsFactory.getCurrentMealAmount();
-			$scope.mealStatus   = MealsFactory.getCurrentMealStatus();
-            $scope.cartCount    = CartFactory.getCartListCount();
+app.component("mealPage", {
+	restrict : "E",
+	replace : true,
+	templateUrl : "component_templates/meal.html",
+	bindings : {},
+	controllerAs : "meal",
+	controller : function (MealsFactory, CartFactory) {
 
-            $scope.selectNum = function (num) {
-                $scope.selectAmount = num;
-            };
+		let self = this;
 
-            $scope.activeNum = function (num) {
-                return $scope.selectAmount === num;
-            };
-			
-			$scope.addMeal = function () {
-                CartFactory.addMealToCartList($scope.currentMeal, $scope.selectAmount);
-			};
+		this.currentMeal  = MealsFactory.getCurrentMeal();
+		this.currency     = MealsFactory.getCurrency();
+		this.selectAmount = MealsFactory.getCurrentMealAmount();
+		this.mealStatus   = MealsFactory.getCurrentMealStatus();
+		this.cartCount    = CartFactory.getCartListCount();
 
-            $scope.removeMeal = function () {
-                CartFactory.removeMeal($scope.currentMeal);
-            };
-			
-			$scope.saveMeal = function () {
-				CartFactory.removeMeal($scope.currentMeal);
-                CartFactory.addMealToCartList($scope.currentMeal, $scope.selectAmount);
-			};
-		}
-	};
+		this.selectNum = function (num) {
+			this.selectAmount = num;
+		};
+
+		this.activeNum = function (num) {
+			return this.selectAmount === num;
+		};
+
+		this.addMeal = function () {
+			CartFactory.addMealToCartList(this.currentMeal, this.selectAmount);
+		};
+
+		this.removeMeal = function () {
+			CartFactory.removeMeal(this.currentMeal);
+		};
+
+		this.saveMeal = function () {
+			self.removeMeal();
+			self.addMeal();
+		};
+	}
 });

@@ -2,11 +2,11 @@ let app = angular.module("Meals", ["ngRoute"])
     .config(function ($routeProvider) {
 
         $routeProvider.when("/meal", {
-            templateUrl: "mealPage.html"
+            templateUrl: "views/mealPage.html"
         });
 
         $routeProvider.when("/cart", {
-            templateUrl: "cartPage.html"
+            templateUrl: "views/cartPage.html"
         });
 
         $routeProvider.when("/", {
