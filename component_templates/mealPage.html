@@ -1,7 +1,8 @@
 <div class="meal-page">
+
     <div class="meal-page__wrap">
         <div class="meal-page__cart">
-            <span class="meal-page__count">{{meal.cartCount}}</span>
+            <span class="meal-page__count">{{ meal.cartCount }}</span>
             <span class="meal-page__text" ng-if="meal.cartCount === 1">блюдо</span>
             <span class="meal-page__text" ng-if="meal.cartCount > 1">блюда</span>
             <a class="meal-page__button" href="#/cart">Корзина</a>
@@ -11,19 +12,22 @@
                 <path class="meal-page__path" d="M304 416c-26.5 0-48 21.5-48 48s21.5 48 48 48 48-21.5 48-48S330.5 416 304 416z"/>
             </svg>
         </div>
+
        <div class="meal-page__picture">
-          <img class="meal-page__image" ng-src="{{meal.currentMeal.image}}" alt="meal">
+          <img class="meal-page__image" ng-src="{{ meal.currentMeal.image }}" alt="meal">
       </div>
-      <div class="meal-page__description">
+
+       <div class="meal-page__description">
           <p class="meal-page__price">
-             {{meal.currency + meal.currentMeal.price}}
+             {{ meal.currency + meal.currentMeal.price }}
          </p>
          <p class="meal-page__name">
-             {{meal.currentMeal.name}}
+             {{ meal.currentMeal.name }}
          </p>
          <p class="meal-page__comment">
              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, placeat! At quisquam quam pariatur culpa non deserunt id perferendis corporis, laborum ut omnis beatae suscipit, dolores cum molestias quaerat labore. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, placeat! Laboriosam impedit tenetur, iusto deserunt sint qui possimus inventore perspiciatis voluptatibus incidunt, fugit in. Quisquam fugit dolorum quibusdam, iste quis.
          </p>
+
          <div class="meal-page__count">
             <ul class="meal-page__list">
                 <li class="meal-page__item"
@@ -38,6 +42,7 @@
                     ng-class="{active : meal.activeNum(5)}" ng-click="meal.selectNum(5)">5</li>
             </ul>
         </div>
+
         <div class="meal-page__buttons">
             <div class="meal-page__left">
                 <a class="meal-page__button" href="#/" ng-show="meal.mealStatus === 'new'">Вернуться</a>
@@ -49,5 +54,7 @@
             </div>
         </div>
     </div>
+
     </div>
+
 </div>
