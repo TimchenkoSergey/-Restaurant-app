@@ -41,6 +41,7 @@ app.factory("CartFactory", function () {
                     return true;
                 }
             }
+
             return false;
         }
     };

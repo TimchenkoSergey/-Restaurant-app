@@ -27,32 +27,32 @@ app.factory("MealsFactory", function ($http, $q) {
 			return deferred.promise;
 		},
 
-		setCurrentMeal : function (meal) {
-			currentMeal = meal;
-		},
-
 		getCurrentMeal : function () {
 			return currentMeal;
 		},
 
-		setCurrentMealStatus : function (status) {
-			currentMealStatus = status;
+		setCurrentMeal : function (meal) {
+			currentMeal = meal;
 		},
 
 		getCurrentMealStatus : function () {
 			return currentMealStatus;
 		},
 
+		setCurrentMealStatus : function (status) {
+			currentMealStatus = status;
+		},
+
 		getCurrency : function () {
 			return currency;
 		},
 
-		setCurrentMealAmount : function (amount) {
-			currentAmount = amount;
-		},
-
 		getCurrentMealAmount : function () {
 			return currentAmount;
+		},
+
+		setCurrentMealAmount : function (amount) {
+			currentAmount = amount;
 		},
         
         setCurrentMealById : function (id) {

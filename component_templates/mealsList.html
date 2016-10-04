@@ -9,17 +9,17 @@
 	<div class="main-content__meals">
 
 		<div class="main-content__meal" ng-repeat="meal in mealsList.products">
-				<a class="main-content__link" href="#/meal" ng-click="mealsList.openMeal(meal)">
-				<div class="main-content__image">
-					<img class="main-content__picture" ng-src="{{ meal.image }}" alt="meal">
-				</div>
-				<p class="main-content__price">
-					{{ mealsList.currency + meal.price }}
-				</p>
-				<div class="main-content__line"></div>
-				<p class="main-content__name">
-					{{ meal.name }}
-				</p>
+				<a class="main-content__link" ui-sref="meal" ng-click="mealsList.openMeal(meal)">
+					<div class="main-content__image">
+						<img class="main-content__picture" ng-src="{{ meal.image }}" alt="meal">
+					</div>
+					<p class="main-content__price">
+						{{ mealsList.currency + meal.price }}
+					</p>
+					<div class="main-content__line"></div>
+					<p class="main-content__name">
+						{{ meal.name }}
+					</p>
 				</a>
 		</div>
 

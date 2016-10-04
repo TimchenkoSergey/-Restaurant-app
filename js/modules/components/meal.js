@@ -6,7 +6,7 @@ app.component("mealPage", {
 	controllerAs : "meal",
 	controller : function (MealsFactory, CartFactory) {
 
-		let self = this;
+		const self = this;
 
 		this.currentMeal  = MealsFactory.getCurrentMeal();
 		this.currency     = MealsFactory.getCurrency();

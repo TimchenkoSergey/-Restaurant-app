@@ -1,20 +1,23 @@
-let app = angular.module("Meals", ["ngRoute"])
-    .config(function ($routeProvider) {
+let app = angular.module("Meals", ["ui.router"])
+    .config(function ($stateProvider, $urlRouterProvider) {
 
-        $routeProvider.when("/meal", {
-            templateUrl: "views/mealPage.html"
-        });
+        $stateProvider
+            .state("main", {
+                url: "/main",
+                templateUrl: "views/mealsList.html"
+            })
+            .state("meal", {
+                url: "/meal",
+                templateUrl: "views/mealPage.html"
+            })
+            .state("cart", {
+                url: "/cart",
+                templateUrl: "views/cartPage.html"
+            });
 
-        $routeProvider.when("/cart", {
-            templateUrl: "views/cartPage.html"
-        });
-
-        $routeProvider.when("/", {
-            templateUrl: "views/mealsList.html"
-        });
-
-        $routeProvider.otherwise({redirectTo: "/"});
+        $urlRouterProvider.otherwise("/main");
 });
+
 
 
 
