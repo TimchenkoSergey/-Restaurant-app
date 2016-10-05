@@ -4,5 +4,7 @@ app.component("footerPage", {
     templateUrl : "component_templates/footerPage.html",
     bindings : {},
     controllerAs : "footer",
-    controller : function () {}
+    controller : function () {
+        "use strict";
+    }
 });

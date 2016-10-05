@@ -5,6 +5,7 @@ app.component("mealsList", {
 	bindings : {},
 	controllerAs : "mealsList",
 	controller : function (MealsFactory) {
+		"use strict";
 
 		const self = this;
 

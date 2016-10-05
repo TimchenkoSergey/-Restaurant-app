@@ -5,6 +5,7 @@ app.component("cartPage", {
     bindings : {},
     controllerAs : "cart",
     controller : function (MealsFactory, CartFactory) {
+        "use strict";
 
         this.currency = MealsFactory.getCurrency();
         this.cartList = CartFactory.getCartList();

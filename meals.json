@@ -43,7 +43,32 @@
       "tax": 2.32,
       "quantity": 15,
       "image": "img/product2.jpg",
-      "modifiers": []
+      "modifiers": [
+        {
+          "id": "54368f5c43c921cb70ee18e8",
+          "name": "Candecor",
+          "price": 2.47,
+          "tax": 0.93
+        },
+        {
+          "id": "54368f5c114b2727f0b09131",
+          "name": "Ecolight",
+          "price": 3.9,
+          "tax": 1.66
+        },
+        {
+          "id": "54368f5cdcad23fa80f1fe48",
+          "name": "Junipoor",
+          "price": 4.67,
+          "tax": 0.67
+        },
+        {
+          "id": "54368f5c9f6e8f559e8f37a2",
+          "name": "Prosure",
+          "price": 2.21,
+          "tax": 0.06
+        }
+      ]
     },
     {
       "id": "54368f5ca09af7e3e3805276",

@@ -1,4 +1,6 @@
 app.factory("MealsFactory", function ($http, $q) {
+	"use strict";
+
 	let mealApiUrl        = "meals.json",
 		meals             = null,
 		currency          = "",
@@ -7,6 +9,15 @@ app.factory("MealsFactory", function ($http, $q) {
 		currentAmount     = 1;
 
 	return {
+		getModifiers : function () {
+			if(currentMeal !== null) {
+				return currentMeal.modifiers;
+			}
+			else {
+				return false;
+			}
+		},
+
 		getMeals : function () {
 			let deferred = $q.defer();
 
