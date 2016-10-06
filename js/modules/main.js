@@ -4,6 +4,10 @@ let app = angular.module("Meals", ["ui.router"])
         $stateProvider
             .state("main", {
                 url: "/main",
+                templateUrl: "views/main.html"
+            })
+            .state("main.meals", {
+                url: "/meals",
                 templateUrl: "views/mealsList.html"
             })
             .state("meal", {
@@ -13,9 +17,13 @@ let app = angular.module("Meals", ["ui.router"])
             .state("cart", {
                 url: "/cart",
                 templateUrl: "views/cartPage.html"
+            })
+            .state("main.drinks", {
+                url: "/drinks",
+                templateUrl: "views/drinksList.html"
             });
 
-        $urlRouterProvider.otherwise("/main");
+        $urlRouterProvider.otherwise("/main/meals");
 });
 
 

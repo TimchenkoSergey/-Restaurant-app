@@ -1,6 +1,4 @@
 app.component("mealsList", {
-	restrict : "E",
-	replace : true,
 	templateUrl : "component_templates/mealsList.html",
 	bindings : {},
 	controllerAs : "mealsList",

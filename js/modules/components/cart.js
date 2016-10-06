@@ -1,6 +1,4 @@
 app.component("cartPage", {
-    restrict : "E",
-    replace : true,
     templateUrl : "component_templates/cartPage.html",
     bindings : {},
     controllerAs : "cart",

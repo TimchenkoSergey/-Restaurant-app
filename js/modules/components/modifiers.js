@@ -1,6 +1,4 @@
 app.component("modifiersPage", {
-    restrict : "E",
-    replace : true,
     templateUrl : "component_templates/modifiersPage.html",
     bindings : {},
     controllerAs : "mod",

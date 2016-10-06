@@ -1,0 +1,33 @@
+<div class="main-content__wrap">
+
+    <div class="main-content__header">
+        НАШИ ЛУЧШИЕ НАПИТКИ
+    </div>
+
+    <div class="main-content__line main-content__line--margin"></div>
+
+    <div class="main-content__meals">
+
+        <div class="main-content__buttons">
+            <button class="main-content__button" ng-click="drinksList.selectOnlySoftDrinks(false)">Все</button>
+            <button class="main-content__button" ng-click="drinksList.selectOnlySoftDrinks(true)">Только без алкогольные</button>
+        </div>
+
+        <div class="main-content__meal" ng-repeat="drink in drinksList.getDrinks()">
+            <a class="main-content__link" ui-sref="meal" ng-click="drinksList.openDrink(drink)">
+                <div class="main-content__image">
+                    <img class="main-content__picture" ng-src="{{ drink.image }}" alt="drink">
+                </div>
+                <p class="main-content__price">
+                    {{ drinksList.currency + drink.price }}
+                </p>
+                <div class="main-content__line"></div>
+                <p class="main-content__name">
+                    {{ drink.name }}
+                </p>
+            </a>
+        </div>
+
+    </div>
+
+</div>

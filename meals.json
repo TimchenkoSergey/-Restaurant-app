@@ -308,5 +308,115 @@
         }
       ]
     }
+  ],
+  "drinks": [
+    {
+      "id": "54368f5c3e45b99286332e641",
+      "name": "Rum",
+      "price": 27.84,
+      "tax": 0.26,
+      "quantity": 20,
+      "image": "img/tipple.jpg",
+      "tipple": true
+    },
+    {
+      "id": "54368f5c3e45b99286332e642",
+      "name": "Coca Cola",
+      "price": 2.4,
+      "tax": 0.26,
+      "quantity": 20,
+      "image": "img/softDrink.jpg",
+      "tipple": false
+    },
+    {
+      "id": "54368f5c3e45b99286332e643",
+      "name": "Vodka",
+      "price": 21.34,
+      "tax": 0.26,
+      "quantity": 20,
+      "image": "img/tipple.jpg",
+      "tipple": true
+    },
+    {
+      "id": "54368f5c3e45b99286332e644",
+      "name": "Fanta",
+      "price": 2.5,
+      "tax": 0.26,
+      "quantity": 20,
+      "image": "img/softDrink.jpg",
+      "tipple": false
+    },
+    {
+      "id": "54368f5c3e45b99286332e645",
+      "name": "Cognac",
+      "price": 41.44,
+      "tax": 0.26,
+      "quantity": 20,
+      "image": "img/tipple.jpg",
+      "tipple": true
+    },
+    {
+      "id": "54368f5c3e45b99286332e646",
+      "name": "Whiskey",
+      "price": 45.14,
+      "tax": 0.26,
+      "quantity": 20,
+      "image": "img/tipple.jpg",
+      "tipple": true
+    },
+    {
+      "id": "54368f5c3e45b99286332e647",
+      "name": "Sprite",
+      "price": 1.91,
+      "tax": 0.26,
+      "quantity": 20,
+      "image": "img/softDrink.jpg",
+      "tipple": false
+    },
+    {
+      "id": "54368f5c3e45b99286332e648",
+      "name": "Beer",
+      "price": 2.99,
+      "tax": 0.26,
+      "quantity": 20,
+      "image": "img/tipple.jpg",
+      "tipple": true
+    },
+    {
+      "id": "54368f5c3e45b99286332e649",
+      "name": "Water",
+      "price": 0.74,
+      "tax": 0.26,
+      "quantity": 20,
+      "image": "img/softDrink.jpg",
+      "tipple": false
+    },
+    {
+      "id": "54368f5c3e45b99286332e6410",
+      "name": "Wine",
+      "price": 12.67,
+      "tax": 0.26,
+      "quantity": 20,
+      "image": "img/tipple.jpg",
+      "tipple": true
+    },
+    {
+      "id": "54368f5c3e45b99286332e6411",
+      "name": "Cooled tea",
+      "price": 2.11,
+      "tax": 0.26,
+      "quantity": 20,
+      "image": "img/softDrink.jpg",
+      "tipple": false
+    },
+    {
+      "id": "54368f5c3e45b99286332e6412",
+      "name": "Juice",
+      "price": 2.56,
+      "tax": 0.26,
+      "quantity": 20,
+      "image": "img/softDrink.jpg",
+      "tipple": false
+    }
   ]
 }
