@@ -9,6 +9,13 @@
 	&__cart {
 		position: absolute;
 		right: 100px;
+
+		@media only screen and (max-width: 1000px) {
+ 			& {
+ 				padding-bottom: 20px;
+ 				position: static;
+ 			}
+ 		}
 	}
 
 	&__icon {
@@ -68,10 +75,24 @@
 		display: flex;
 
 		justify-content: center;
+
+		@media only screen and (max-width: 360px) {
+ 			& {
+ 				display: block;
+ 
+ 				text-align: center;
+ 			}
+ 		}
 	}
 
 	&__left {
 		margin-right: 30px;
+
+		@media only screen and (max-width: 360px) {
+			& {
+				margin-right: 0;
+			}
+		}
 	}
 
 	&__button {
@@ -93,6 +114,13 @@
 		&:hover {
 			background-color: #666;
 		}
+
+		@media only screen and (max-width: 360px) {
+ 			& {
+ 				margin-left: 0;
+ 				margin-bottom: 10px;
+ 			}
+ 		}
 	}
 }
 

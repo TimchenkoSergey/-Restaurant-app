@@ -47,7 +47,7 @@
 
         <div class="meal-page__buttons">
             <div class="meal-page__left">
-                <a class="meal-page__button" ui-sref="main" ng-show="meal.mealStatus === 'new'">Вернуться</a>
+                <a class="meal-page__button" ui-sref="main.meals" ng-show="meal.mealStatus === 'new'">Вернуться</a>
                 <a class="meal-page__button" ui-sref="cart" ng-click="meal.removeMeal()" ng-show="meal.mealStatus === 'edit'">Удалить</a>
             </div>
             <div class="meal-page__right">
