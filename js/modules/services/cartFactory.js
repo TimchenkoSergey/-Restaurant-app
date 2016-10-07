@@ -58,16 +58,17 @@ app.factory("CartFactory", function () {
             return total.toFixed(2);
         },
 
+        deleteModifiers : function () {
+            modifiers = null;
+        },
+
         removeMeal : function (meal) {
 
             for(let i = 0, len = cartList.length; i < len; i++) {
                 if(cartList[i].id === meal.id) {
                     cartList.splice(i, 1);
-                    return true;
                 }
             }
-
-            return false;
         }
     };
 });

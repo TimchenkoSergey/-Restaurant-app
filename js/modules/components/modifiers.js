@@ -41,10 +41,10 @@ app.component("modifiersPage", {
                 }
             }
 
-        this.modifiers = MealsFactory.getModifiers();
-        this.currency  = MealsFactory.getCurrency();
-        
-        this.selectModifier = function (modifier) {
+        self.modifiers = MealsFactory.getModifiers();
+        self.currency  = MealsFactory.getCurrency();
+
+        self.selectModifier = function (modifier) {
 
             if(!itemHasBeenSelected(modifier)) {
                 selectedModifiers.push(modifier);

@@ -68,14 +68,11 @@ app.factory("MealsFactory", function ($http, $q) {
         
         setCurrentMealById : function (id) {
 
-            for(let i = 0, len = meals.products.length; i < len; i++) {
-                if(meals.products[i].id == id) {
-                    currentMeal = meals.products[i];
-                    return true;
-                }
-            }
+			currentMeal = meals.products.filter((item) => item.id === id)[0];
 
-            return false;
+			if(!currentMeal) {
+				currentMeal = meals.drinks.filter((item) => item.id === id)[0];
+			}
         }
 	};
 });

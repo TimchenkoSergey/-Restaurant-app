@@ -11,12 +11,9 @@ app.component("cartPage", {
 
 
         this.editMeal = function (meal) {
-            let mealSelected = MealsFactory.setCurrentMealById(meal.id);
-
-            if(mealSelected) {
-                MealsFactory.setCurrentMealAmount(meal.amount);
-                MealsFactory.setCurrentMealStatus("edit");
-            }
+            MealsFactory.setCurrentMealById(meal.id);
+            MealsFactory.setCurrentMealAmount(meal.amount);
+            MealsFactory.setCurrentMealStatus("edit");
         };
     }
 });

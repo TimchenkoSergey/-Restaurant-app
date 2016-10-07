@@ -7,30 +7,31 @@ app.component("mealPage", {
 
 		const self = this;
 
-		this.currentMeal  = MealsFactory.getCurrentMeal();
-		this.currency     = MealsFactory.getCurrency();
-		this.selectAmount = MealsFactory.getCurrentMealAmount();
-		this.mealStatus   = MealsFactory.getCurrentMealStatus();
-		this.cartCount    = CartFactory.getCartListCount();
+		self.currentMeal  = MealsFactory.getCurrentMeal();
+		self.currency     = MealsFactory.getCurrency();
+		self.selectAmount = MealsFactory.getCurrentMealAmount();
+		self.mealStatus   = MealsFactory.getCurrentMealStatus();
+		self.cartCount    = CartFactory.getCartListCount();
 
-		this.selectNum = function (num) {
-			this.selectAmount = num;
+		self.selectNum = function (num) {
+			self.selectAmount = num;
 		};
 
-		this.activeNum = function (num) {
-			return this.selectAmount === num;
+		self.activeNum = function (num) {
+			return self.selectAmount === num;
 		};
 
-		this.addMeal = function () {
-			CartFactory.addMealToCartList(this.currentMeal, this.selectAmount);
+		self.addMeal = function () {
+			CartFactory.addMealToCartList(self.currentMeal, self.selectAmount);
 		};
 
-		this.removeMeal = function () {
-			CartFactory.removeMeal(this.currentMeal);
+		self.removeMeal = function () {
+			CartFactory.removeMeal(self.currentMeal);
+			CartFactory.deleteModifiers();
 		};
 
-		this.saveMeal = function () {
-			self.removeMeal();
+		self.saveMeal = function () {
+			CartFactory.removeMeal(self.currentMeal);
 			self.addMeal();
 		};
 	}

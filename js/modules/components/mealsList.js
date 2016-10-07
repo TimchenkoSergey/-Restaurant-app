@@ -13,7 +13,7 @@ app.component("mealsList", {
 				self.products = mealsObj.products;
 			});
 
-		this.openMeal = function (meal) {
+		self.openMeal = function (meal) {
 			MealsFactory.setCurrentMeal(meal);
 			MealsFactory.setCurrentMealStatus("new");
 			MealsFactory.setCurrentMealAmount(1);
