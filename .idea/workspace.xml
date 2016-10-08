@@ -3,19 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="bde1748d-d80e-4057-bb16-c28e04b46fe8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component_templates/cartPage.html" afterPath="$PROJECT_DIR$/component_templates/cartPage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component_templates/logoPage.html" afterPath="$PROJECT_DIR$/component_templates/logoPage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component_templates/mealPage.html" afterPath="$PROJECT_DIR$/component_templates/mealPage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component_templates/modifiersPage.html" afterPath="$PROJECT_DIR$/component_templates/modifiersPage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component_templates/drinksList.html" afterPath="$PROJECT_DIR$/component_templates/drinksList.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component_templates/menuPage.html" afterPath="$PROJECT_DIR$/component_templates/menuPage.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.min.css" afterPath="$PROJECT_DIR$/css/main.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/blocks/cart/_cart.scss" afterPath="$PROJECT_DIR$/scss/blocks/cart/_cart.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/blocks/main-content/_main-content.scss" afterPath="$PROJECT_DIR$/scss/blocks/main-content/_main-content.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/blocks/meal-page/_meal-page.scss" afterPath="$PROJECT_DIR$/scss/blocks/meal-page/_meal-page.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/blocks/menu/_menu.scss" afterPath="$PROJECT_DIR$/scss/blocks/menu/_menu.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/main.scss" afterPath="$PROJECT_DIR$/scss/main.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/main.html" afterPath="$PROJECT_DIR$/views/main.html" />
     </list>
     <ignored path="2Angular.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,7 +27,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="410">
@@ -46,12 +37,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="logoPage.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/component_templates/logoPage.html">
+      <file leaf-file-name="menuPage.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/component_templates/menuPage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="45" selection-start-line="1" selection-start-column="45" selection-end-line="1" selection-end-column="45" />
-              <folding />
+            <state relative-caret-position="272">
+              <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+              <folding>
+                <element signature="n#svg#0;n#a#0;n#li#2;n#ul#0;n#nav#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -91,7 +84,6 @@
         <option value="$PROJECT_DIR$/views/main.html" />
         <option value="$PROJECT_DIR$/views/mealsList.html" />
         <option value="$PROJECT_DIR$/views/drinksList.html" />
-        <option value="$PROJECT_DIR$/component_templates/menuPage.html" />
         <option value="$PROJECT_DIR$/component_templates/drinksList.html" />
         <option value="$PROJECT_DIR$/component_templates/cartPage.html" />
         <option value="$PROJECT_DIR$/js/modules/components/cart.js" />
@@ -106,6 +98,7 @@
         <option value="$PROJECT_DIR$/scss/blocks/main-content/_main-content.scss" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/component_templates/logoPage.html" />
+        <option value="$PROJECT_DIR$/component_templates/menuPage.html" />
       </list>
     </option>
   </component>
@@ -344,12 +337,12 @@
       <workItem from="1475524735234" duration="4330000" />
       <workItem from="1475576525359" duration="95000" />
       <workItem from="1475594996105" duration="34166000" />
-      <workItem from="1475831353290" duration="5166000" />
+      <workItem from="1475831353290" duration="6145000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89082000" />
+    <option name="totallyTimeSpent" value="90061000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -493,13 +486,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/component_templates/footerPage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/cartPage.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -519,13 +505,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="46" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/component_templates/menuPage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -666,11 +645,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/component_templates/footerPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="410">
           <caret line="35" column="27" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/component_templates/menuPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding>
+            <element signature="n#svg#0;n#a#0;n#li#2;n#ul#0;n#nav#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

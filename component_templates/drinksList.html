@@ -9,8 +9,8 @@
     <div class="main-content__meals">
 
         <div class="main-content__buttons">
-            <button class="main-content__button" ng-click="drinksList.onlySoftDrinks = false">Все</button>
-            <button class="main-content__button" ng-click="drinksList.onlySoftDrinks = true">Только без алкогольные</button>
+            <button class="main-content__button" ng-class="{ active_button: !drinksList.onlySoftDrinks }" ng-click="drinksList.onlySoftDrinks = false">Все</button>
+            <button class="main-content__button" ng-class=" {active_button: drinksList.onlySoftDrinks }" ng-click="drinksList.onlySoftDrinks = true">Только без алкогольные</button>
         </div>
 
         <div class="main-content__meal-wrap" ng-if="!drinksList.onlySoftDrinks">
