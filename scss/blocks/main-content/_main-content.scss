@@ -37,8 +37,14 @@
 
 		cursor: pointer;
 
+		transition: 0.5s;
+
 		&:nth-child(3n) {
 			margin-right: 0;
+		}
+
+		&:hover {
+			box-shadow: 5px 5px 30px rgba(0,0,0,0.4);
 		}
 
 		@media only screen and (max-width: 950px) {
@@ -75,6 +81,28 @@
 
 	&__link {
 		text-decoration: none;
+
+		&--button {
+			display: inline-block;
+			width: 100px;
+			margin-top: 30px;
+			padding: 10px;
+
+			background-color: #eee;
+			color: #000;
+
+			border: 2px solid transparent;
+
+			transition: 0.5s;
+
+			&:hover {
+				border: 2px solid #000;
+			}
+		}
+
+		&--active {
+			border: 2px solid #000;
+		}
 	}
 	
 	&__image {
