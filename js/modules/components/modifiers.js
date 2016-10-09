@@ -1,6 +1,8 @@
 app.component("modifiersPage", {
     templateUrl : "component_templates/modifiersPage.html",
-    bindings : {},
+    bindings : {
+        currency: "="
+    },
     controllerAs : "mod",
     controller : ["MealsFactory", "CartFactory", function (MealsFactory, CartFactory) {
         "use strict";
@@ -42,7 +44,6 @@ app.component("modifiersPage", {
             }
 
         self.modifiers = MealsFactory.getModifiers();
-        self.currency  = MealsFactory.getCurrency();
 
         self.selectModifier = function (modifier) {
 

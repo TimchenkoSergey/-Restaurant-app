@@ -7,25 +7,6 @@
 		position: relative;
 	}
 
-	&__cart {
-		position: absolute;
-		right: 100px;
-
-		@media only screen and (max-width: 1000px) {
- 			& {
- 				padding-bottom: 20px;
- 				position: static;
- 			}
- 		}
-	}
-
-	&__icon {
-		width: 20px;
-		height: 20px;
-
-		fill: #666;
-	}
-
 	&__image {
 		max-width: 350px;
 		height: auto;
