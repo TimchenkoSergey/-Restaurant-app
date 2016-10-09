@@ -2,7 +2,7 @@ app.component("mealPage", {
 	templateUrl : "component_templates/mealPage.html",
 	bindings : {},
 	controllerAs : "meal",
-	controller : function (MealsFactory, CartFactory) {
+	controller : ["MealsFactory", "CartFactory", function (MealsFactory, CartFactory) {
 		"use strict";
 
 		const self = this;
@@ -34,5 +34,5 @@ app.component("mealPage", {
 			CartFactory.removeMeal(self.currentMeal);
 			self.addMeal();
 		};
-	}
+	}]
 });

@@ -2,7 +2,7 @@ app.component("mealsList", {
 	templateUrl : "component_templates/mealsList.html",
 	bindings : {},
 	controllerAs : "mealsList",
-	controller : function (MealsFactory) {
+	controller : ["MealsFactory", function (MealsFactory) {
 		"use strict";
 
 		const self = this;
@@ -18,5 +18,5 @@ app.component("mealsList", {
 			MealsFactory.setCurrentMealStatus("new");
 			MealsFactory.setCurrentMealAmount(1);
 		};
-	}
+	}]
 });

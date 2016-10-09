@@ -2,12 +2,12 @@ app.component("cartPage", {
     templateUrl : "component_templates/cartPage.html",
     bindings : {},
     controllerAs : "cart",
-    controller : function (MealsFactory, CartFactory) {
+    controller : ["MealsFactory", "CartFactory", function (MealsFactory, CartFactory) {
         "use strict";
 
         this.currency = MealsFactory.getCurrency();
         this.cartList = CartFactory.getCartList();
-        this.total    = CartFactory.getTotalPrice();
+        this.total = CartFactory.getTotalPrice();
 
 
         this.editMeal = function (meal) {
@@ -15,5 +15,5 @@ app.component("cartPage", {
             MealsFactory.setCurrentMealAmount(meal.amount);
             MealsFactory.setCurrentMealStatus("edit");
         };
-    }
+    }]
 });

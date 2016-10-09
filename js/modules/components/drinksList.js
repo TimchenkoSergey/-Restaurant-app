@@ -2,7 +2,7 @@ app.component("drinksList", {
     templateUrl : "component_templates/drinksList.html",
     bindings : {},
     controllerAs : "drinksList",
-    controller : function (MealsFactory) {
+    controller : ["MealsFactory", function (MealsFactory) {
         "use strict";
 
         const self          = this;
@@ -29,5 +29,5 @@ app.component("drinksList", {
                 return drinks.filter((item) => item.tipple !== true);
             }
         };
-    }
+    }]
 });

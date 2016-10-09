@@ -2,11 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bde1748d-d80e-4057-bb16-c28e04b46fe8" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/cartPage.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/drinksList.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/main.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/mealPage.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/mealsList.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component_templates/cartPage.html" afterPath="$PROJECT_DIR$/component_templates/cartPage.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component_templates/drinksList.html" afterPath="$PROJECT_DIR$/component_templates/drinksList.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component_templates/menuPage.html" afterPath="$PROJECT_DIR$/component_templates/menuPage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component_templates/mealPage.html" afterPath="$PROJECT_DIR$/component_templates/mealPage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component_templates/mealsList.html" afterPath="$PROJECT_DIR$/component_templates/mealsList.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component_templates/modifiersPage.html" afterPath="$PROJECT_DIR$/component_templates/modifiersPage.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.min.css" afterPath="$PROJECT_DIR$/css/main.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/blocks/main-content/_main-content.scss" afterPath="$PROJECT_DIR$/scss/blocks/main-content/_main-content.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/modules/components/cart.js" afterPath="$PROJECT_DIR$/js/modules/components/cart.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/modules/components/drinksList.js" afterPath="$PROJECT_DIR$/js/modules/components/drinksList.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/modules/components/footer.js" afterPath="$PROJECT_DIR$/js/modules/components/footer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/modules/components/header.js" afterPath="$PROJECT_DIR$/js/modules/components/header.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/modules/components/logo.js" afterPath="$PROJECT_DIR$/js/modules/components/logo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/modules/components/meal.js" afterPath="$PROJECT_DIR$/js/modules/components/meal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/modules/components/mealsList.js" afterPath="$PROJECT_DIR$/js/modules/components/mealsList.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/modules/components/menu.js" afterPath="$PROJECT_DIR$/js/modules/components/menu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/modules/components/modifiers.js" afterPath="$PROJECT_DIR$/js/modules/components/modifiers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/modules/main.js" afterPath="$PROJECT_DIR$/js/modules/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/blocks/meal-page/_meal-page.scss" afterPath="$PROJECT_DIR$/scss/blocks/meal-page/_meal-page.scss" />
     </list>
     <ignored path="2Angular.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,14 +55,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="menuPage.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/component_templates/menuPage.html">
+      <file leaf-file-name="_meal-page.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scss/blocks/meal-page/_meal-page.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-              <folding>
-                <element signature="n#svg#0;n#a#0;n#li#2;n#ul#0;n#nav#0;n#!!top" expanded="false" />
-              </folding>
+            <state relative-caret-position="388">
+              <caret line="74" column="34" selection-start-line="74" selection-start-column="34" selection-end-line="74" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.scss" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/scss/main.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -57,14 +83,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/scss/blocks/meal-page/_meal-page.scss" />
         <option value="$PROJECT_DIR$/multipleSelectWidget.html" />
         <option value="$PROJECT_DIR$/scss/blocks/cart/_cart.scss" />
         <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/meal.html" />
         <option value="$PROJECT_DIR$/cart.html" />
         <option value="$PROJECT_DIR$/cartPage.html" />
-        <option value="$PROJECT_DIR$/views/mealPage.html" />
         <option value="$PROJECT_DIR$/libs/angular/angular-route.min.js" />
         <option value="$PROJECT_DIR$/component_templates/meal.html" />
         <option value="$PROJECT_DIR$/js/modules/directives/meal.js" />
@@ -73,32 +97,36 @@
         <option value="$PROJECT_DIR$/js/modules/controllers/mealsListCtrl.js" />
         <option value="$PROJECT_DIR$/component_templates/headerPage.html" />
         <option value="$PROJECT_DIR$/component_templates/footerPage.html" />
-        <option value="$PROJECT_DIR$/component_templates/modifiersPage.html" />
         <option value="$PROJECT_DIR$/meals.json" />
-        <option value="$PROJECT_DIR$/js/modules/components/menu.js" />
-        <option value="$PROJECT_DIR$/js/modules/components/logo.js" />
-        <option value="$PROJECT_DIR$/js/modules/components/header.js" />
-        <option value="$PROJECT_DIR$/js/modules/components/footer.js" />
-        <option value="$PROJECT_DIR$/component_templates/mealsList.html" />
         <option value="$PROJECT_DIR$/views/drinskList.html" />
-        <option value="$PROJECT_DIR$/views/main.html" />
-        <option value="$PROJECT_DIR$/views/mealsList.html" />
-        <option value="$PROJECT_DIR$/views/drinksList.html" />
-        <option value="$PROJECT_DIR$/component_templates/drinksList.html" />
-        <option value="$PROJECT_DIR$/component_templates/cartPage.html" />
-        <option value="$PROJECT_DIR$/js/modules/components/cart.js" />
-        <option value="$PROJECT_DIR$/js/modules/components/drinksList.js" />
-        <option value="$PROJECT_DIR$/js/modules/components/mealsList.js" />
         <option value="$PROJECT_DIR$/js/modules/services/mealsFactory.js" />
-        <option value="$PROJECT_DIR$/js/modules/components/modifiers.js" />
         <option value="$PROJECT_DIR$/js/modules/services/cartFactory.js" />
-        <option value="$PROJECT_DIR$/js/modules/components/meal.js" />
-        <option value="$PROJECT_DIR$/js/modules/main.js" />
-        <option value="$PROJECT_DIR$/component_templates/mealPage.html" />
         <option value="$PROJECT_DIR$/scss/blocks/main-content/_main-content.scss" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/component_templates/logoPage.html" />
         <option value="$PROJECT_DIR$/component_templates/menuPage.html" />
+        <option value="$PROJECT_DIR$/js/modules/components/cart.js" />
+        <option value="$PROJECT_DIR$/js/modules/components/drinksList.js" />
+        <option value="$PROJECT_DIR$/js/modules/components/footer.js" />
+        <option value="$PROJECT_DIR$/js/modules/components/header.js" />
+        <option value="$PROJECT_DIR$/js/modules/components/logo.js" />
+        <option value="$PROJECT_DIR$/js/modules/components/meal.js" />
+        <option value="$PROJECT_DIR$/js/modules/components/mealsList.js" />
+        <option value="$PROJECT_DIR$/js/modules/components/menu.js" />
+        <option value="$PROJECT_DIR$/js/modules/components/modifiers.js" />
+        <option value="$PROJECT_DIR$/component_templates/mealPage.html" />
+        <option value="$PROJECT_DIR$/component_templates/drinksList.html" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/component_templates/modifiersPage.html" />
+        <option value="$PROJECT_DIR$/component_templates/mealsList.html" />
+        <option value="$PROJECT_DIR$/views/cartPage.html" />
+        <option value="$PROJECT_DIR$/views/drinksList.html" />
+        <option value="$PROJECT_DIR$/views/mealPage.html" />
+        <option value="$PROJECT_DIR$/views/mealsList.html" />
+        <option value="$PROJECT_DIR$/views/main.html" />
+        <option value="$PROJECT_DIR$/js/modules/main.js" />
+        <option value="$PROJECT_DIR$/component_templates/cartPage.html" />
+        <option value="$PROJECT_DIR$/scss/blocks/meal-page/_meal-page.scss" />
+        <option value="$PROJECT_DIR$/scss/main.scss" />
       </list>
     </option>
   </component>
@@ -144,7 +172,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -214,25 +241,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="main-content" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="2Angular" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="2Angular" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
+              <option name="myItemId" value="meal-page" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -252,6 +261,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -337,12 +347,13 @@
       <workItem from="1475524735234" duration="4330000" />
       <workItem from="1475576525359" duration="95000" />
       <workItem from="1475594996105" duration="34166000" />
-      <workItem from="1475831353290" duration="6145000" />
+      <workItem from="1475831353290" duration="8250000" />
+      <workItem from="1476042084624" duration="1114000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90061000" />
+    <option name="totallyTimeSpent" value="93280000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -358,7 +369,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15080526" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1500732" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -412,20 +423,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scss/blocks/meal-page/meal-page.scss" />
-    <entry file="file://$PROJECT_DIR$/scss/main.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scss/blocks/meal-page/_meal-page.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="51" column="16" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/multipleSelectWidget.html" />
     <entry file="file://$PROJECT_DIR$/scss/blocks/cart/_cart.scss">
       <provider selected="true" editor-type-id="text-editor">
@@ -458,27 +455,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/modules/components/logo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="27" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/modules/components/header.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="29" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/component_templates/modifiersPage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="105" selection-start-line="8" selection-start-column="100" selection-end-line="8" selection-end-column="105" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/component_templates/headerPage.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -486,102 +462,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/cartPage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/mealsList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/drinskList.html" />
-    <entry file="file://$PROJECT_DIR$/component_templates/mealsList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="46" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/mealPage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="19" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/meals.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
           <caret line="319" column="13" selection-start-line="319" selection-start-column="7" selection-end-line="319" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/component_templates/drinksList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="33" column="12" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/component_templates/cartPage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="51" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/drinksList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/modules/components/footer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="29" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/modules/components/menu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="27" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/modules/components/mealsList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/modules/components/cart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="27" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/modules/components/drinksList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -592,13 +477,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/modules/components/modifiers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="60" column="51" selection-start-line="60" selection-start-column="51" selection-end-line="60" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/modules/services/cartFactory.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -606,34 +484,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/modules/components/meal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="29" column="42" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/modules/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/component_templates/mealPage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-63">
-          <caret line="30" column="10" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scss/blocks/main-content/_main-content.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="427">
           <caret line="100" column="5" selection-start-line="100" selection-start-column="5" selection-end-line="100" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -641,7 +495,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="45" selection-start-line="1" selection-start-column="45" selection-end-line="1" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -649,7 +502,132 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/modules/components/drinksList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/modules/components/cart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="49" selection-start-line="4" selection-start-column="49" selection-end-line="4" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/modules/components/footer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/modules/components/header.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/modules/components/logo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/modules/components/meal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="49" selection-start-line="4" selection-start-column="49" selection-end-line="4" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/modules/components/mealsList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/modules/components/menu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/modules/components/modifiers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="46" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/component_templates/menuPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/component_templates/drinksList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="40" selection-start-line="0" selection-start-column="40" selection-end-line="0" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/component_templates/mealsList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="40" selection-start-line="0" selection-start-column="40" selection-end-line="0" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/component_templates/modifiersPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="53" selection-start-line="0" selection-start-column="53" selection-end-line="0" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/cartPage.html" />
+    <entry file="file://$PROJECT_DIR$/views/drinksList.html" />
+    <entry file="file://$PROJECT_DIR$/views/mealPage.html" />
+    <entry file="file://$PROJECT_DIR$/views/mealsList.html" />
+    <entry file="file://$PROJECT_DIR$/views/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/modules/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="47" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
+          <folding>
+            <marker date="1476043638452" expanded="true" signature="275:276" placeholder="..." />
+            <marker date="1476043638452" expanded="true" signature="275:409" placeholder="..." />
+            <marker date="1476043638452" expanded="true" signature="275:716" placeholder="..." />
+            <marker date="1476043638452" expanded="true" signature="494:633" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/component_templates/cartPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="42" column="37" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
+          <folding>
+            <element signature="n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -661,13 +639,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/component_templates/menuPage.html">
+    <entry file="file://$PROJECT_DIR$/component_templates/mealPage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding>
-            <element signature="n#svg#0;n#a#0;n#li#2;n#ul#0;n#nav#0;n#!!top" expanded="false" />
-          </folding>
+        <state relative-caret-position="-477">
+          <caret line="0" column="23" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/blocks/meal-page/_meal-page.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="74" column="34" selection-start-line="74" selection-start-column="34" selection-end-line="74" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>

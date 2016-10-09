@@ -2,7 +2,7 @@ app.component("modifiersPage", {
     templateUrl : "component_templates/modifiersPage.html",
     bindings : {},
     controllerAs : "mod",
-    controller : function (MealsFactory, CartFactory) {
+    controller : ["MealsFactory", "CartFactory", function (MealsFactory, CartFactory) {
         "use strict";
 
         const self               = this;
@@ -60,5 +60,5 @@ app.component("modifiersPage", {
             let checkedModifiers = getCheckedModifiers();
             pickCheckedModifiers(checkedModifiers);
         }
-    }
+    }]
 });
