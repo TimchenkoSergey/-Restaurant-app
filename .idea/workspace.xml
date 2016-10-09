@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bde1748d-d80e-4057-bb16-c28e04b46fe8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component_templates/cartPage.html" afterPath="$PROJECT_DIR$/component_templates/cartPage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component_templates/drinksList.html" afterPath="$PROJECT_DIR$/component_templates/drinksList.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component_templates/mealPage.html" afterPath="$PROJECT_DIR$/component_templates/mealPage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component_templates/mealsList.html" afterPath="$PROJECT_DIR$/component_templates/mealsList.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.min.css" afterPath="$PROJECT_DIR$/css/main.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/modules/components/modifiers.js" afterPath="$PROJECT_DIR$/js/modules/components/modifiers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/blocks/main-content/_main-content.scss" afterPath="$PROJECT_DIR$/scss/blocks/main-content/_main-content.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/blocks/meal-page/_meal-page.scss" afterPath="$PROJECT_DIR$/scss/blocks/meal-page/_meal-page.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/main.scss" afterPath="$PROJECT_DIR$/scss/main.scss" />
-    </list>
+    <list default="true" id="bde1748d-d80e-4057-bb16-c28e04b46fe8" name="Default" comment="" />
     <ignored path="2Angular.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -250,12 +238,12 @@
       <workItem from="1475576525359" duration="95000" />
       <workItem from="1475594996105" duration="34166000" />
       <workItem from="1475831353290" duration="8250000" />
-      <workItem from="1476042084624" duration="4814000" />
+      <workItem from="1476042084624" duration="5180000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96980000" />
+    <option name="totallyTimeSpent" value="97346000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -267,7 +255,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
