@@ -1,30 +1,5 @@
 .select-count {
-
-  &__list {
-    padding: 0;
-
-    list-style: none;
-
-    text-align: center;
-  }
-
-  &__item {
-    display: inline-block;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 8px;
-    padding-right: 8px;
-
-    border: 2px solid #666;
-
-    cursor: pointer;
-
-    &:hover {
-      background-color: #999;
-    }
-  }
-}
-
-.active {
-  background-color: #999;
+  
+  @import "elements/_list";
+  @import "elements/_item";
 }

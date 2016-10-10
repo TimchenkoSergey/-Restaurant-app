@@ -1,0 +1,11 @@
+
+&__left {
+	margin-right: 30px;
+
+	@media only screen and (max-width: 520px) {
+		& {
+			margin-right: 0;
+			margin-bottom: 20px;
+		}
+	}
+}

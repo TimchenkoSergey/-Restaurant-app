@@ -1,0 +1,10 @@
+&__image {
+	max-width: 350px;
+	height: auto;
+
+	@media only screen and (max-width: 400px) {
+		& {
+			width: 80%;
+		}
+	}
+}

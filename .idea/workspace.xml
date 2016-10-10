@@ -3,7 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="bde1748d-d80e-4057-bb16-c28e04b46fe8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/blocks/cart/_cart.scss" afterPath="$PROJECT_DIR$/scss/blocks/cart/_cart.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.min.css" afterPath="$PROJECT_DIR$/css/main.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/blocks/main-content/_main-content.scss" afterPath="$PROJECT_DIR$/scss/blocks/main-content/_main-content.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/blocks/meal-page/_meal-page.scss" afterPath="$PROJECT_DIR$/scss/blocks/meal-page/_meal-page.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/blocks/menu/_menu.scss" afterPath="$PROJECT_DIR$/scss/blocks/menu/_menu.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/blocks/modifiers/_modifiers.scss" afterPath="$PROJECT_DIR$/scss/blocks/modifiers/_modifiers.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/blocks/select-count/_select-count.scss" afterPath="$PROJECT_DIR$/scss/blocks/select-count/_select-count.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/main.scss" afterPath="$PROJECT_DIR$/scss/main.scss" />
     </list>
     <ignored path="2Angular.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,7 +30,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="36">
@@ -34,15 +40,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="meal.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/modules/components/meal.js">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/modules/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+            <state relative-caret-position="306">
+              <caret line="18" column="56" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
               <folding>
-                <element signature="e#551#627#0" expanded="false" />
-                <element signature="e#662#746#0" expanded="false" />
-                <element signature="e#779#848#0" expanded="false" />
+                <marker date="1476102059004" expanded="true" signature="298:395" placeholder="..." />
+                <marker date="1476102059004" expanded="true" signature="614:615" placeholder="..." />
+                <marker date="1476102059004" expanded="true" signature="614:752" placeholder="..." />
+                <marker date="1476102059004" expanded="true" signature="837:980" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -299,12 +306,12 @@
       <workItem from="1475594996105" duration="34166000" />
       <workItem from="1475831353290" duration="8250000" />
       <workItem from="1476042084624" duration="8402000" />
-      <workItem from="1476118721840" duration="4551000" />
+      <workItem from="1476118721840" duration="5900000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105119000" />
+    <option name="totallyTimeSpent" value="106468000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -563,19 +570,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/modules/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="56" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
-          <folding>
-            <marker date="1476102059004" expanded="true" signature="298:395" placeholder="..." />
-            <marker date="1476102059004" expanded="true" signature="614:615" placeholder="..." />
-            <marker date="1476102059004" expanded="true" signature="614:752" placeholder="..." />
-            <marker date="1476102059004" expanded="true" signature="837:980" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/component_templates/cartIconPage.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -625,11 +619,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="359">
           <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-          <folding>
-            <element signature="e#449#655#0" expanded="false" />
-            <element signature="e#666#801#0" expanded="false" />
-            <element signature="e#814#1275#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -674,6 +664,19 @@
         <state relative-caret-position="36">
           <caret line="10" column="51" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/modules/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="56" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+          <folding>
+            <marker date="1476102059004" expanded="true" signature="298:395" placeholder="..." />
+            <marker date="1476102059004" expanded="true" signature="614:615" placeholder="..." />
+            <marker date="1476102059004" expanded="true" signature="614:752" placeholder="..." />
+            <marker date="1476102059004" expanded="true" signature="837:980" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

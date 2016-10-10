@@ -1,0 +1,17 @@
+&__item {
+	display: block;
+
+	border: 2px solid transparent;
+
+	transition: 0.5s;
+
+	&:hover {
+		border: 2px solid #fff;
+	}
+
+	@media only screen and (max-width: 410px) {
+		& {
+			font-size: 12px;
+		}
+	}
+}

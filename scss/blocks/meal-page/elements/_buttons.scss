@@ -1,0 +1,15 @@
+&__buttons {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	display: flex;
+
+	justify-content: center;
+
+	@media only screen and (max-width: 520px) {
+		& {
+			display: block;
+
+			text-align: center;
+		}
+	}
+}
