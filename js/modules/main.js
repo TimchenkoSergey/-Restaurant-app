@@ -2,7 +2,15 @@ let app = angular.module("Meals", ["ui.router"])
     .config(function ($stateProvider, $urlRouterProvider) {
 
         $stateProvider
-            .state("main", {
+            .state("app", {
+                url: "/app",
+                template: `<header-page></header-page>
+                           <main class="main-content">
+                               <ui-view autoscroll></ui-view>
+                           </main>
+                           <footer-page></footer-page>`
+            })
+            .state("app.main", {
                 url: "/main",
                 template: `<a class="main-content__link main-content__link--button"
                                ui-sref="main.meals"
@@ -12,33 +20,26 @@ let app = angular.module("Meals", ["ui.router"])
                                ui-sref-active="main-content__link--active">Напитки</a>
                            <ui-view></ui-view>`
             })
-            .state("main.meals", {
+            .state("error", {
+                url: "/error",
+                templateUrl: "component_templates/404Page.html"
+            })
+            .state("app.main.meals", {
                 url: "/meals",
                 template: "<meals-list id='mealsList'></meals-list>"
             })
-            .state("meal", {
+            .state("app.main.drinks", {
+                url: "/drinks",
+                template: "<drinks-list></drinks-list>"
+            })
+            .state("app.meal", {
                 url: "/meal",
                 template: "<meal-page id='meal'></meal-page>"
             })
-            .state("cart", {
+            .state("app.cart", {
                 url: "/cart",
                 template: "<cart-page id='cart'></cart-page>"
-            })
-            .state("main.drinks", {
-                url: "/drinks",
-                template: "<drinks-list></drinks-list>"
             });
 
-        $urlRouterProvider.otherwise("/main/meals");
+        $urlRouterProvider.otherwise("/app/main/meals");
 });
-
-
-
-
-
-
-
-
-
-
-
