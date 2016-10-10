@@ -1,7 +1,7 @@
 app.component("modifiersPage", {
     templateUrl : "component_templates/modifiersPage.html",
     bindings : {
-        currency: "="
+        currency: "@"
     },
     controllerAs : "mod",
     controller : ["MealsFactory", "CartFactory", function (MealsFactory, CartFactory) {

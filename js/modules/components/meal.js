@@ -12,15 +12,7 @@ app.component("mealPage", {
 		self.selectAmount = MealsFactory.getCurrentMealAmount();
 		self.mealStatus   = MealsFactory.getCurrentMealStatus();
 		self.cartCount    = CartFactory.getCartListCount();
-
-		self.selectNum = function (num) {
-			self.selectAmount = num;
-		};
-
-		self.activeNum = function (num) {
-			return self.selectAmount === num;
-		};
-
+		
 		self.addMeal = function () {
 			CartFactory.addMealToCartList(self.currentMeal, self.selectAmount);
 		};

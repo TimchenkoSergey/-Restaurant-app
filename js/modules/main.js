@@ -13,10 +13,10 @@ let app = angular.module("Meals", ["ui.router"])
             .state("app.main", {
                 url: "/main",
                 template: `<a class="main-content__link main-content__link--button"
-                               ui-sref="main.meals"
+                               ui-sref="app.main.meals"
                                ui-sref-active="main-content__link--active">Еда</a>
                            <a class="main-content__link main-content__link--button"
-                               ui-sref="main.drinks"
+                               ui-sref="app.main.drinks"
                                ui-sref-active="main-content__link--active">Напитки</a>
                            <ui-view></ui-view>`
             })

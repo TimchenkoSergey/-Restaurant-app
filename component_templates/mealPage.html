@@ -2,7 +2,7 @@
 
     <div class="meal-page__wrap">
 
-        <cart-icon-page count="meal.cartCount"></cart-icon-page>
+        <cart-icon-page count="{{meal.cartCount}}"></cart-icon-page>
 
        <div class="meal-page__picture">
           <img class="meal-page__image" ng-src="{{ meal.currentMeal.image }}" alt="meal">
@@ -19,31 +19,18 @@
              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, placeat! At quisquam quam pariatur culpa non deserunt id perferendis corporis, laborum ut omnis beatae suscipit, dolores cum molestias quaerat labore. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, placeat! Laboriosam impedit tenetur, iusto deserunt sint qui possimus inventore perspiciatis voluptatibus incidunt, fugit in. Quisquam fugit dolorum quibusdam, iste quis.
          </p>
 
-         <modifiers-page  currency="meal.currency"></modifiers-page>
+         <modifiers-page  currency="{{meal.currency}}"></modifiers-page>
 
-         <div class="meal-page__count">
-            <ul class="meal-page__list">
-                <li class="meal-page__item"
-                    ng-class="{active : meal.activeNum(1)}" ng-click="meal.selectNum(1)">1</li>
-                <li class="meal-page__item"
-                    ng-class="{active : meal.activeNum(2)}" ng-click="meal.selectNum(2)">2</li>
-                <li class="meal-page__item"
-                    ng-class="{active : meal.activeNum(3)}" ng-click="meal.selectNum(3)">3</li>
-                <li class="meal-page__item"
-                    ng-class="{active : meal.activeNum(4)}" ng-click="meal.selectNum(4)">4</li>
-                <li class="meal-page__item"
-                    ng-class="{active : meal.activeNum(5)}" ng-click="meal.selectNum(5)">5</li>
-            </ul>
-        </div>
+         <select-count select="meal.selectAmount"></select-count>
 
         <div class="meal-page__buttons">
             <div class="meal-page__left">
-                <a class="meal-page__button meal-page__button--block" ui-sref="main.meals" ng-show="meal.mealStatus === 'new'">Вернуться</a>
-                <a class="meal-page__button meal-page__button--block" ui-sref="cart" ng-click="meal.removeMeal()" ng-show="meal.mealStatus === 'edit'">Удалить</a>
+                <a class="meal-page__button meal-page__button--block" ui-sref="app.main.meals" ng-show="meal.mealStatus === 'new'">Вернуться</a>
+                <a class="meal-page__button meal-page__button--block" ui-sref="app.cart" ng-click="meal.removeMeal()" ng-show="meal.mealStatus === 'edit'">Удалить</a>
             </div>
             <div class="meal-page__right">
-                <a class="meal-page__button meal-page__button--block" ui-sref="cart" ng-click="meal.addMeal()" ng-show="meal.mealStatus === 'new'">+Добавить в корзину</a>
-                <a class="meal-page__button meal-page__button--block" ui-sref="cart" ng-click="meal.saveMeal()" ng-show="meal.mealStatus === 'edit'">Сохранить</a>
+                <a class="meal-page__button meal-page__button--block" ui-sref="app.cart" ng-click="meal.addMeal()" ng-show="meal.mealStatus === 'new'">+Добавить в корзину</a>
+                <a class="meal-page__button meal-page__button--block" ui-sref="app.cart" ng-click="meal.saveMeal()" ng-show="meal.mealStatus === 'edit'">Сохранить</a>
             </div>
         </div>
     </div>
