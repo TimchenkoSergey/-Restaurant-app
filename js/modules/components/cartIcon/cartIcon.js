@@ -1,5 +1,5 @@
 app.component("cartIconPage", {
-    templateUrl : "component_templates/cartIconPage.html",
+    templateUrl : "js/modules/components/cartIcon/cartIconPage.html",
     bindings : {
         count: "@"
     },

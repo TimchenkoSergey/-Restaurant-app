@@ -1,5 +1,5 @@
 app.component("menuPage", {
-    templateUrl : "component_templates/menuPage.html",
+    templateUrl : "js/modules/components/menu/menuPage.html",
     bindings : {},
     controllerAs : "menu",
     controller : [function () {

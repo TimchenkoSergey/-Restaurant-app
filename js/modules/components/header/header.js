@@ -1,5 +1,5 @@
 app.component("headerPage", {
-    templateUrl : "component_templates/headerPage.html",
+    templateUrl : "js/modules/components/header/headerPage.html",
     bindings : {},
     controllerAs : "header",
     controller : [function () {

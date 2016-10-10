@@ -1,5 +1,5 @@
 app.component("selectCount", {
-    templateUrl : "component_templates/selectCountPage.html",
+    templateUrl : "js/modules/components/selectCount/selectCountPage.html",
     bindings : {
         select: "="
     },

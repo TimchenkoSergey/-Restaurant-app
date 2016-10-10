@@ -1,5 +1,5 @@
 app.component("modifiersPage", {
-    templateUrl : "component_templates/modifiersPage.html",
+    templateUrl : "js/modules/components/modifiers/modifiersPage.html",
     bindings : {
         currency: "@"
     },

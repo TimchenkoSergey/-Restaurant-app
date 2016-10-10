@@ -1,5 +1,5 @@
 app.component("logoPage", {
-    templateUrl : "component_templates/logoPage.html",
+    templateUrl : "js/modules/components/logo/logoPage.html",
     bindings : {},
     controllerAs : "logo",
     controller : [function () {

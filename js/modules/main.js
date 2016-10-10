@@ -22,7 +22,7 @@ let app = angular.module("Meals", ["ui.router"])
             })
             .state("error", {
                 url: "/error",
-                templateUrl: "component_templates/404Page.html"
+                templateUrl: "js/modules/components/error/404Page.html"
             })
             .state("app.main.meals", {
                 url: "/meals",

@@ -1,5 +1,5 @@
 app.component("mealPage", {
-	templateUrl : "component_templates/mealPage.html",
+	templateUrl : "js/modules/components/meal/mealPage.html",
 	bindings : {},
 	controllerAs : "meal",
 	controller : ["MealsFactory", "CartFactory", function (MealsFactory, CartFactory) {

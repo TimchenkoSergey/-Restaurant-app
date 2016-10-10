@@ -32,7 +32,7 @@
 
         <div class="main-content__meal-wrap" ng-if="drinksList.onlySoftDrinks">
             <div class="main-content__meal" ng-repeat="drink in drinksList.getDrinks()">
-            <a class="main-content__link" ui-sref=app."meal" ng-click="drinksList.openDrink(drink)">
+            <a class="main-content__link" ui-sref="app.meal" ng-click="drinksList.openDrink(drink)">
                 <div class="main-content__image">
                     <img class="main-content__picture" ng-src="{{ drink.image }}" alt="drink">
                 </div>
