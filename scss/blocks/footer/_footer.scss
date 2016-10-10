@@ -4,37 +4,9 @@
 
 	background-color: #1b171c;
 
-	&__description {
-		padding-top: 30px;
-	}
-
-	&__text {
-		color: $text-color;
-		text-align: center;
-		font-size: 12px;
-		font-weight: normal;
-	}
-
-	&__social {
-		padding-top: 30px;
-
-		text-align: center;
-	}
-
-	&__link {
-		text-decoration: none;
-	}
-
-	&__svg {
-		margin-right: 15px;
-		margin-left: 15px;
-
-		fill: $text-color;
-
-		transition: 0.5s;
-
-		&:hover {
-			fill: #434242;
-		}
-	}
+	@import "elements/_description";
+	@import "elements/_text";
+	@import "elements/_social";
+	@import "elements/_link";
+	@import "elements/_svg";
 }

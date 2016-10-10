@@ -1,0 +1,12 @@
+&__svg {
+	margin-right: 15px;
+	margin-left: 15px;
+
+	fill: $text-color;
+
+	transition: 0.5s;
+
+	&:hover {
+		fill: #434242;
+	}
+}

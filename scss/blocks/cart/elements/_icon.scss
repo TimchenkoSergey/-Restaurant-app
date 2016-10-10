@@ -1,0 +1,14 @@
+&__icon {
+	width: 20px;
+	height: 20px;
+
+	fill: #666;
+
+	cursor: pointer;
+	
+	transition: 0.3s;
+
+	&:hover {
+		fill: #222;
+	}
+}

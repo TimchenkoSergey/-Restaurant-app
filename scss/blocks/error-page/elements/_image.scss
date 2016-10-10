@@ -1,0 +1,10 @@
+&__image {
+	@media only screen and (max-width: 900px) {
+		& {
+			display: block;
+		margin-top: 110px;
+
+			order: 1;
+		}
+	}
+}

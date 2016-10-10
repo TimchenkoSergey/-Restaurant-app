@@ -12,38 +12,7 @@
  		}
  	}
 
-	&__container {
-		max-width: 1100px;
-		margin: 0 auto;
-	}
-
-	&__caption {
-		padding-top: 80px;
-
-		text-align: center;
-		color: $h-text-color;
-		font-size: 40px;
-		line-height: 45px;
-
-		@media only screen and (max-width: 480px) {
- 			& {
- 				padding-top: 40px;
- 
- 				font-size: 30px;
- 			}
- 		}
-	}
-
-	&__text {
-		padding-top: 55px;
-
-		text-align: center;
-		color: $h-text-color;
-
-		@media only screen and (max-width: 480px) {
- 			& {
- 				padding-top: 30px;
- 			}
- 		}
-	}
+ 	@import "elements/_container";
+ 	@import "elements/_caption";
+ 	@import "elements/_text";
 }

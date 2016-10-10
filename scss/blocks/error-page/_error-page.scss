@@ -1,112 +1,12 @@
 .error-page {
 	background-color: #78b86f;
-
-	&__header {
-		padding-top: 150px;
-		position: relative;
-
-		text-align: center;
-
-		@media only screen and (max-width: 900px) {
- 			& {
- 				display: flex;
-
- 				justify-content: center;
- 			}
- 		}
-	}
-
-	&__image {
-		@media only screen and (max-width: 900px) {
- 			& {
- 				display: block;
-				margin-top: 110px;
-
- 				order: 1;
- 			}
- 		}
-	}
-
-
-	&__square {
-		width: 25px;
-		height: 25px;
-		display: inline-block;
-		position: absolute;
-		top: 230px;
-
-		background-color: $text-color;
-
-		@media only screen and (max-width: 900px) {
- 			& {
- 				display: block;
-				margin-left: -115px;
-
- 				order: 2;
- 			}
- 		}
-	}
-
-	&__logo {
-		position: absolute;
-		top: 45px;
-
-		@media only screen and (max-width: 900px) {
- 			& {
- 				display: block;
- 				order: 2;
- 			}
- 		}
-	}
-
-	&__head {
-		color: $text-color;
-		text-align: center;
-		font-size: 50px;
-		font-weight: normal;
-		line-height: 60px;
-
-		@media only screen and (max-width: 500px) {
- 			& {
- 				font-size: 40px;
- 			}
- 		}
-	}
-
-	&__text {
-		max-width: 570px;
-		margin: 0 auto;
-		
-		color: $text-color;
-		text-align: center;
-		font-size: 24px;
-		font-weight: normal;
-		line-height: 30px;
-	}
-
-	&__footer {
-		padding-bottom: 30px;
-
-		text-align: center;
-	}
-
-	&__link {
-		display: inline-block;
-		padding: 15px 25px;
-
-		background-color: #000;
-
-		border: 3px solid transparent;
-		
-		color: $text-color;
-		text-decoration: none;
-
-		cursor: pointer;
-
-		transition: 0.7s;
-
-		&:hover {
-			border: 3px solid $text-color;
-		}
-	}
+	
+	@import "elements/_header";
+	@import "elements/_image";
+	@import "elements/_square";
+	@import "elements/_logo";
+	@import "elements/_head";
+	@import "elements/_text";
+	@import "elements/_footer";
+	@import "elements/_link";
 }
