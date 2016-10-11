@@ -9,26 +9,26 @@
 			controllerAs : "meal",
 			controller : ["MealsFactory", "CartFactory", function (MealsFactory, CartFactory) {
 
-				const self = this;
+				const vm = this;
 
-				self.currentMeal  = MealsFactory.getCurrentMeal();
-				self.currency     = MealsFactory.getCurrency();
-				self.selectAmount = MealsFactory.getCurrentMealAmount();
-				self.mealStatus   = MealsFactory.getCurrentMealStatus();
-				self.cartCount    = CartFactory.getCartListCount();
+				vm.currentMeal  = MealsFactory.getCurrentMeal();
+				vm.currency     = MealsFactory.getCurrency();
+				vm.selectAmount = MealsFactory.getCurrentMealAmount();
+				vm.mealStatus   = MealsFactory.getCurrentMealStatus();
+				vm.cartCount    = CartFactory.getCartListCount();
 
-				self.addMeal = function () {
-					CartFactory.addMealToCartList(self.currentMeal, self.selectAmount);
+				vm.addMeal = function () {
+					CartFactory.addMealToCartList(vm.currentMeal, vm.selectAmount);
 				};
 
-				self.removeMeal = function () {
-					CartFactory.removeMeal(self.currentMeal);
+				vm.removeMeal = function () {
+					CartFactory.removeMeal(vm.currentMeal);
 					CartFactory.deleteModifiers();
 				};
 
-				self.saveMeal = function () {
-					CartFactory.removeMeal(self.currentMeal);
-					self.addMeal();
+				vm.saveMeal = function () {
+					CartFactory.removeMeal(vm.currentMeal);
+					vm.addMeal();
 				};
 			}]
 		});

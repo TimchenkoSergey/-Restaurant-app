@@ -11,14 +11,14 @@
             controllerAs : "select",
             controller : [function () {
 
-                const self = this;
+                const vm = this;
 
-                self.selectNum = function (num) {
-                    self.select = num;
+                vm.selectNum = function (num) {
+                    vm.select = num;
                 };
 
-                self.activeNum = function (num) {
-                    return self.select === num;
+                vm.activeNum = function (num) {
+                    return vm.select === num;
                 };
 
             }]

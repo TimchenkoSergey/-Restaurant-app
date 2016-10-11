@@ -9,12 +9,14 @@
             controllerAs : "cart",
             controller : ["MealsFactory", "CartFactory", function (MealsFactory, CartFactory) {
 
-                this.currency = MealsFactory.getCurrency();
-                this.cartList = CartFactory.getCartList();
-                this.total = CartFactory.getTotalPrice();
+                const vm = this;
+
+                vm.currency = MealsFactory.getCurrency();
+                vm.cartList = CartFactory.getCartList();
+                vm.total = CartFactory.getTotalPrice();
 
 
-                this.editMeal = function (meal) {
+                vm.editMeal = function (meal) {
                     MealsFactory.setCurrentMealById(meal.id);
                     MealsFactory.setCurrentMealAmount(meal.amount);
                     MealsFactory.setCurrentMealStatus("edit");

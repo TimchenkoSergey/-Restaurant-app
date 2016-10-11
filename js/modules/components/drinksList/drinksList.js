@@ -9,24 +9,24 @@
             controllerAs : "drinksList",
             controller : ["MealsFactory", function (MealsFactory) {
 
-                const self          = this;
-                let drinks          = [];
-                self.onlySoftDrinks = false;
+                const vm          = this;
+                let drinks        = [];
+                vm.onlySoftDrinks = false;
 
                 MealsFactory.getMeals()
                     .then(function (drinksObj) {
-                        self.currency = drinksObj.currency;
+                        vm.currency = drinksObj.currency;
                         drinks = drinksObj.drinks;
                     });
 
-                self.openDrink = function (drink) {
+                vm.openDrink = function (drink) {
                     MealsFactory.setCurrentMeal(drink);
                     MealsFactory.setCurrentMealStatus("new");
                     MealsFactory.setCurrentMealAmount(1);
                 };
 
-                self.getDrinks = function () {
-                    if(!self.onlySoftDrinks) {
+                vm.getDrinks = function () {
+                    if(!vm.onlySoftDrinks) {
                         return drinks;
                     }
                     else {

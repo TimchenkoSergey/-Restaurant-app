@@ -9,15 +9,15 @@
 			controllerAs : "mealsList",
 			controller : ["MealsFactory", function (MealsFactory) {
 
-				const self = this;
+				const vm = this;
 
 				MealsFactory.getMeals()
 					.then(function (mealsObj) {
-						self.currency = mealsObj.currency;
-						self.products = mealsObj.products;
+						vm.currency = mealsObj.currency;
+						vm.products = mealsObj.products;
 					});
 
-				self.openMeal = function (meal) {
+				vm.openMeal = function (meal) {
 					MealsFactory.setCurrentMeal(meal);
 					MealsFactory.setCurrentMealStatus("new");
 					MealsFactory.setCurrentMealAmount(1);

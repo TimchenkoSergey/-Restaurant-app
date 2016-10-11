@@ -11,7 +11,7 @@
             controllerAs : "mod",
             controller : ["MealsFactory", "CartFactory", function (MealsFactory, CartFactory) {
 
-                const self               = this;
+                const vm                 = this;
                 let selectedModifiers    = [],
                     itemHasBeenSelected  = function (modifier) {
                         return selectedModifiers.some((item) => modifier.name === item.name);
@@ -35,21 +35,21 @@
 
                             for (let i = 0, lenChecked = checkedModifiers.length; i < lenChecked; i++) {
 
-                                for (let j = 0, len = self.modifiers.length; j < len; j++) {
+                                for (let j = 0, len = vm.modifiers.length; j < len; j++) {
 
-                                    if (self.modifiers[j].name === checkedModifiers[i].name) {
+                                    if (vm.modifiers[j].name === checkedModifiers[i].name) {
 
-                                        self.modifiers[j].check = true;
-                                        self.selectModifier(self.modifiers[j]);
+                                        vm.modifiers[j].check = true;
+                                        vm.selectModifier(vm.modifiers[j]);
                                     }
                                 }
                             }
                         }
                     }
 
-                self.modifiers = MealsFactory.getModifiers();
+                vm.modifiers = MealsFactory.getModifiers();
 
-                self.selectModifier = function (modifier) {
+                vm.selectModifier = function (modifier) {
 
                     if(!itemHasBeenSelected(modifier)) {
                         selectedModifiers.push(modifier);
