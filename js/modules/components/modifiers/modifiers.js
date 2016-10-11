@@ -1,65 +1,70 @@
-app.component("modifiersPage", {
-    templateUrl : "js/modules/components/modifiers/modifiersPage.html",
-    bindings : {
-        currency: "@"
-    },
-    controllerAs : "mod",
-    controller : ["MealsFactory", "CartFactory", function (MealsFactory, CartFactory) {
-        "use strict";
+(function() {
+    "use strict";
 
-        const self               = this;
-        let selectedModifiers    = [],
-            itemHasBeenSelected  = function (modifier) {
-                return selectedModifiers.some((item) => modifier.name === item.name);
+    angular
+        .module("Meals")
+        .component("modifiersPage", {
+            templateUrl : "js/modules/components/modifiers/modifiersPage.html",
+            bindings : {
+                currency: "@"
             },
-            deleteModifier       = function (modifier) {
-                return selectedModifiers.filter((item) => modifier.name !== item.name);
-            },
-            getCheckedModifiers  = function () {
-                let cartList = CartFactory.getCartList(),
-                    meal;
+            controllerAs : "mod",
+            controller : ["MealsFactory", "CartFactory", function (MealsFactory, CartFactory) {
 
-                meal = cartList.filter((item) => {
-                    return item.name === MealsFactory.getCurrentMeal().name;
-                })[0];
+                const self               = this;
+                let selectedModifiers    = [],
+                    itemHasBeenSelected  = function (modifier) {
+                        return selectedModifiers.some((item) => modifier.name === item.name);
+                    },
+                    deleteModifier       = function (modifier) {
+                        return selectedModifiers.filter((item) => modifier.name !== item.name);
+                    },
+                    getCheckedModifiers  = function () {
+                        let cartList = CartFactory.getCartList(),
+                            meal;
 
-                return meal.modifiers;
-            },
-            pickCheckedModifiers = function (checkedModifiers) {
+                        meal = cartList.filter((item) => {
+                                return item.name === MealsFactory.getCurrentMeal().name;
+                    })[0];
 
-                if(checkedModifiers) {
+                        return meal.modifiers;
+                    },
+                    pickCheckedModifiers = function (checkedModifiers) {
 
-                    for (let i = 0, lenChecked = checkedModifiers.length; i < lenChecked; i++) {
+                        if(checkedModifiers) {
 
-                        for (let j = 0, len = self.modifiers.length; j < len; j++) {
+                            for (let i = 0, lenChecked = checkedModifiers.length; i < lenChecked; i++) {
 
-                            if (self.modifiers[j].name === checkedModifiers[i].name) {
+                                for (let j = 0, len = self.modifiers.length; j < len; j++) {
 
-                                self.modifiers[j].check = true;
-                                self.selectModifier(self.modifiers[j]);
+                                    if (self.modifiers[j].name === checkedModifiers[i].name) {
+
+                                        self.modifiers[j].check = true;
+                                        self.selectModifier(self.modifiers[j]);
+                                    }
+                                }
                             }
                         }
                     }
+
+                self.modifiers = MealsFactory.getModifiers();
+
+                self.selectModifier = function (modifier) {
+
+                    if(!itemHasBeenSelected(modifier)) {
+                        selectedModifiers.push(modifier);
+                    }
+                    else {
+                        selectedModifiers = deleteModifier(modifier);
+                    }
+
+                    CartFactory.addModifiersToList(selectedModifiers);
+                };
+
+                if(MealsFactory.getCurrentMealStatus() === "edit") {
+                    let checkedModifiers = getCheckedModifiers();
+                    pickCheckedModifiers(checkedModifiers);
                 }
-            }
-
-        self.modifiers = MealsFactory.getModifiers();
-
-        self.selectModifier = function (modifier) {
-
-            if(!itemHasBeenSelected(modifier)) {
-                selectedModifiers.push(modifier);
-            }
-            else {
-                selectedModifiers = deleteModifier(modifier);
-            }
-
-            CartFactory.addModifiersToList(selectedModifiers);
-        };
-
-        if(MealsFactory.getCurrentMealStatus() === "edit") {
-            let checkedModifiers = getCheckedModifiers();
-            pickCheckedModifiers(checkedModifiers);
-        }
-    }]
-});
+            }]
+        });
+})();

@@ -2,31 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bde1748d-d80e-4057-bb16-c28e04b46fe8" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/component_templates/404Page.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/component_templates/cartIconPage.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/component_templates/cartPage.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/component_templates/drinksList.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/component_templates/footerPage.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/component_templates/headerPage.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/component_templates/logoPage.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/component_templates/mealPage.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/component_templates/mealsList.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/component_templates/menuPage.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/component_templates/modifiersPage.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/component_templates/selectCountPage.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/modules/components/cart.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/modules/components/cartIcon.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/modules/components/drinksList.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/modules/components/footer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/modules/components/header.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/modules/components/logo.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/modules/components/meal.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/modules/components/mealsList.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/modules/components/menu.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/modules/components/modifiers.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/modules/components/selectCount.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/modules/components/cart/cart.js" afterPath="$PROJECT_DIR$/js/modules/components/cart/cart.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/modules/components/cartIcon/cartIcon.js" afterPath="$PROJECT_DIR$/js/modules/components/cartIcon/cartIcon.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/modules/components/drinksList/drinksList.js" afterPath="$PROJECT_DIR$/js/modules/components/drinksList/drinksList.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/modules/components/footer/footer.js" afterPath="$PROJECT_DIR$/js/modules/components/footer/footer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/modules/components/header/header.js" afterPath="$PROJECT_DIR$/js/modules/components/header/header.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/modules/components/logo/logo.js" afterPath="$PROJECT_DIR$/js/modules/components/logo/logo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/modules/components/meal/meal.js" afterPath="$PROJECT_DIR$/js/modules/components/meal/meal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/modules/components/mealsList/mealsList.js" afterPath="$PROJECT_DIR$/js/modules/components/mealsList/mealsList.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/modules/components/menu/menu.js" afterPath="$PROJECT_DIR$/js/modules/components/menu/menu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/modules/components/modifiers/modifiers.js" afterPath="$PROJECT_DIR$/js/modules/components/modifiers/modifiers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/modules/components/selectCount/selectCount.js" afterPath="$PROJECT_DIR$/js/modules/components/selectCount/selectCount.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/modules/main.js" afterPath="$PROJECT_DIR$/js/modules/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/modules/services/cartFactory.js" afterPath="$PROJECT_DIR$/js/modules/services/cartFactory.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/modules/services/mealsFactory.js" afterPath="$PROJECT_DIR$/js/modules/services/mealsFactory.js" />
     </list>
     <ignored path="2Angular.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,21 +37,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="19" column="62" selection-start-line="19" selection-start-column="62" selection-end-line="19" selection-end-column="62" />
+            <state relative-caret-position="247">
+              <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="drinksList.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/modules/components/drinksList/drinksList.html">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/modules/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="34" column="51" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -75,13 +65,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/main.html" />
         <option value="$PROJECT_DIR$/js/modules/controllers/mealsListCtrl.js" />
         <option value="$PROJECT_DIR$/component_templates/headerPage.html" />
         <option value="$PROJECT_DIR$/meals.json" />
         <option value="$PROJECT_DIR$/views/drinskList.html" />
-        <option value="$PROJECT_DIR$/js/modules/services/mealsFactory.js" />
-        <option value="$PROJECT_DIR$/js/modules/services/cartFactory.js" />
         <option value="$PROJECT_DIR$/scss/blocks/main-content/_main-content.scss" />
         <option value="$PROJECT_DIR$/js/modules/components/cart.js" />
         <option value="$PROJECT_DIR$/js/modules/components/drinksList.js" />
@@ -112,20 +99,23 @@
         <option value="$PROJECT_DIR$/component_templates/selectCountPage.html" />
         <option value="$PROJECT_DIR$/js/modules/components/selectCount.js" />
         <option value="$PROJECT_DIR$/component_templates/mealPage.html" />
-        <option value="$PROJECT_DIR$/js/modules/components/cart/cart.js" />
+        <option value="$PROJECT_DIR$/js/modules/components/drinksList/drinksList.html" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/modules/config.js" />
         <option value="$PROJECT_DIR$/js/modules/main.js" />
+        <option value="$PROJECT_DIR$/js/modules/services/cartFactory.js" />
+        <option value="$PROJECT_DIR$/js/modules/services/mealsFactory.js" />
+        <option value="$PROJECT_DIR$/js/modules/components/cart/cart.js" />
         <option value="$PROJECT_DIR$/js/modules/components/cartIcon/cartIcon.js" />
         <option value="$PROJECT_DIR$/js/modules/components/drinksList/drinksList.js" />
         <option value="$PROJECT_DIR$/js/modules/components/footer/footer.js" />
         <option value="$PROJECT_DIR$/js/modules/components/header/header.js" />
         <option value="$PROJECT_DIR$/js/modules/components/logo/logo.js" />
+        <option value="$PROJECT_DIR$/js/modules/components/selectCount/selectCount.js" />
         <option value="$PROJECT_DIR$/js/modules/components/meal/meal.js" />
         <option value="$PROJECT_DIR$/js/modules/components/mealsList/mealsList.js" />
         <option value="$PROJECT_DIR$/js/modules/components/menu/menu.js" />
         <option value="$PROJECT_DIR$/js/modules/components/modifiers/modifiers.js" />
-        <option value="$PROJECT_DIR$/js/modules/components/selectCount/selectCount.js" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/js/modules/components/drinksList/drinksList.html" />
       </list>
     </option>
   </component>
@@ -252,7 +242,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="drinksList" />
+              <option name="myItemId" value="logo" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -346,12 +336,12 @@
       <workItem from="1475594996105" duration="34166000" />
       <workItem from="1475831353290" duration="8250000" />
       <workItem from="1476042084624" duration="8402000" />
-      <workItem from="1476118721840" duration="7529000" />
+      <workItem from="1476118721840" duration="9933000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108097000" />
+    <option name="totallyTimeSpent" value="110501000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -422,33 +412,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/meals.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="319" column="13" selection-start-line="319" selection-start-column="7" selection-end-line="319" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/modules/services/mealsFactory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/modules/services/cartFactory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="64" column="6" selection-start-line="64" selection-start-column="6" selection-end-line="64" selection-end-column="6" />
-          <folding>
-            <element signature="e#178#362#0" expanded="false" />
-            <element signature="e#421#468#0" expanded="false" />
-            <element signature="e#1030#1070#0" expanded="false" />
-            <element signature="e#1109#1562#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scss/blocks/main-content/_main-content.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="427">
@@ -656,46 +619,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/modules/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
-          <folding>
-            <element signature="e#159#466#0" expanded="false" />
-            <element signature="e#499#1043#0" expanded="false" />
-            <element signature="e#1073#1191#0" expanded="false" />
-            <element signature="e#1230#1345#0" expanded="false" />
-            <element signature="e#1385#1488#0" expanded="false" />
-            <element signature="e#1521#1628#0" expanded="false" />
-            <element signature="e#1661#1768#0" expanded="false" />
-            <marker date="1476136296049" expanded="true" signature="298:395" placeholder="..." />
-            <marker date="1476136296049" expanded="true" signature="614:615" placeholder="..." />
-            <marker date="1476136296049" expanded="true" signature="614:752" placeholder="..." />
-            <marker date="1476136296049" expanded="true" signature="837:980" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/modules/components/cartIcon/cartIconPage.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/modules/components/cart/cart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/modules/components/cartIcon/cartIcon.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="67" />
           <folding />
         </state>
       </provider>
@@ -708,97 +635,173 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/modules/components/drinksList/drinksList.js">
+    <entry file="file://$PROJECT_DIR$/js/modules/config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/modules/components/footer/footer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/modules/components/header/header.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/modules/components/logo/logo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/modules/components/meal/meal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/modules/components/mealsList/mealsList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/modules/components/menu/menu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/modules/components/modifiers/modifiers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="69" />
+        <state relative-caret-position="306">
+          <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
           <folding>
-            <element signature="e#423#524#0" expanded="false" />
-            <element signature="e#581#684#0" expanded="false" />
-            <element signature="e#733#1024#0" expanded="false" />
-            <element signature="e#1089#1649#0" expanded="false" />
-            <element signature="e#1756#2040#0" expanded="false" />
-            <element signature="e#2102#2223#0" expanded="false" />
+            <element signature="e#192#543#0" expanded="false" />
+            <element signature="e#580#1184#0" expanded="false" />
+            <element signature="e#1218#1348#0" expanded="false" />
+            <element signature="e#1391#1518#0" expanded="false" />
+            <element signature="e#1562#1677#0" expanded="false" />
+            <element signature="e#1714#1833#0" expanded="false" />
+            <element signature="e#1870#1989#0" expanded="false" />
+            <marker date="1476221778899" expanded="true" signature="347:460" placeholder="..." />
+            <marker date="1476221778899" expanded="true" signature="703:857" placeholder="..." />
+            <marker date="1476221778899" expanded="true" signature="950:1109" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/modules/components/selectCount/selectCount.js">
+    <entry file="file://$PROJECT_DIR$/js/modules/services/cartFactory.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="68" selection-start-line="1" selection-start-column="68" selection-end-line="1" selection-end-column="68" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#259#491#0" expanded="false" />
+            <element signature="e#562#625#0" expanded="false" />
+            <element signature="e#680#736#0" expanded="false" />
+            <element signature="e#799#1262#0" expanded="false" />
+            <element signature="e#1307#1363#0" expanded="false" />
+            <element signature="e#1410#1951#0" expanded="false" />
+            <element signature="e#2000#2057#0" expanded="false" />
+            <element signature="e#2105#2355#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/modules/services/mealsFactory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="5" column="55" selection-start-line="5" selection-start-column="55" selection-end-line="5" selection-end-column="55" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/js/modules/components/cart/cart.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="19" column="62" selection-start-line="19" selection-start-column="62" selection-end-line="19" selection-end-column="62" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#101#797#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/modules/components/cartIcon/cartIcon.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/modules/components/drinksList/drinksList.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="34" column="51" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
+        <state relative-caret-position="73">
+          <caret line="18" column="49" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/modules/components/drinksList/drinksList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/modules/components/footer/footer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/modules/components/header/header.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#103#294#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/modules/components/selectCount/selectCount.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/modules/components/logo/logo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/modules/components/meal/meal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#83#947#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/modules/components/mealsList/mealsList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#84#623#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/modules/components/menu/menu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/modules/components/modifiers/modifiers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#548#665#0" expanded="false" />
+            <element signature="e#730#849#0" expanded="false" />
+            <element signature="e#906#1253#0" expanded="false" />
+            <element signature="e#1326#1974#0" expanded="false" />
+            <element signature="e#2097#2445#0" expanded="false" />
+            <element signature="e#2515#2660#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/modules/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
           <folding />
         </state>
       </provider>

@@ -1,30 +1,35 @@
-app.component("mealPage", {
-	templateUrl : "js/modules/components/meal/mealPage.html",
-	bindings : {},
-	controllerAs : "meal",
-	controller : ["MealsFactory", "CartFactory", function (MealsFactory, CartFactory) {
-		"use strict";
+(function() {
+	"use strict";
 
-		const self = this;
+	angular
+		.module("Meals")
+		.component("mealPage", {
+			templateUrl : "js/modules/components/meal/mealPage.html",
+			bindings : {},
+			controllerAs : "meal",
+			controller : ["MealsFactory", "CartFactory", function (MealsFactory, CartFactory) {
 
-		self.currentMeal  = MealsFactory.getCurrentMeal();
-		self.currency     = MealsFactory.getCurrency();
-		self.selectAmount = MealsFactory.getCurrentMealAmount();
-		self.mealStatus   = MealsFactory.getCurrentMealStatus();
-		self.cartCount    = CartFactory.getCartListCount();
-		
-		self.addMeal = function () {
-			CartFactory.addMealToCartList(self.currentMeal, self.selectAmount);
-		};
+				const self = this;
 
-		self.removeMeal = function () {
-			CartFactory.removeMeal(self.currentMeal);
-			CartFactory.deleteModifiers();
-		};
+				self.currentMeal  = MealsFactory.getCurrentMeal();
+				self.currency     = MealsFactory.getCurrency();
+				self.selectAmount = MealsFactory.getCurrentMealAmount();
+				self.mealStatus   = MealsFactory.getCurrentMealStatus();
+				self.cartCount    = CartFactory.getCartListCount();
 
-		self.saveMeal = function () {
-			CartFactory.removeMeal(self.currentMeal);
-			self.addMeal();
-		};
-	}]
-});
+				self.addMeal = function () {
+					CartFactory.addMealToCartList(self.currentMeal, self.selectAmount);
+				};
+
+				self.removeMeal = function () {
+					CartFactory.removeMeal(self.currentMeal);
+					CartFactory.deleteModifiers();
+				};
+
+				self.saveMeal = function () {
+					CartFactory.removeMeal(self.currentMeal);
+					self.addMeal();
+				};
+			}]
+		});
+})();

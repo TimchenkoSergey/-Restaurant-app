@@ -1,78 +1,83 @@
-app.factory("MealsFactory", function ($http, $q) {
+(function() {
 	"use strict";
 
-	let mealApiUrl        = "meals.json",
-		meals             = null,
-		currency          = "",
-		currentMeal       = null,
-		currentMealStatus = "new",
-		currentAmount     = 1;
+	angular
+		.module("Meals")
+		.factory("MealsFactory", function ($http, $q) {
 
-	return {
-		getModifiers : function () {
-			if(currentMeal !== null) {
-				return currentMeal.modifiers;
-			}
-			else {
-				return false;
-			}
-		},
+			let mealApiUrl        = "meals.json",
+				meals             = null,
+				currency          = "",
+				currentMeal       = null,
+				currentMealStatus = "new",
+				currentAmount     = 1;
 
-		getMeals : function () {
-			let deferred = $q.defer();
+			return {
+				getModifiers : function () {
+					if(currentMeal !== null) {
+						return currentMeal.modifiers;
+					}
+					else {
+						return false;
+					}
+				},
 
-			$http({method: "GET", url: mealApiUrl})
-				.success(function (data) {
-					meals    = data;
-					currency = data.currency;
+				getMeals : function () {
+					let deferred = $q.defer();
 
-					deferred.resolve(data);
-				})
-				.error(function (data, status) {
-					deferred.reject("Error in $http request");
+					$http({method: "GET", url: mealApiUrl})
+						.success(function (data) {
+							meals    = data;
+							currency = data.currency;
 
-					console.log(data);
-					console.log(status);
-				});
+							deferred.resolve(data);
+						})
+						.error(function (data, status) {
+							deferred.reject("Error in $http request");
 
-			return deferred.promise;
-		},
+							console.log(data);
+							console.log(status);
+						});
 
-		getCurrentMeal : function () {
-			return currentMeal;
-		},
+					return deferred.promise;
+				},
 
-		setCurrentMeal : function (meal) {
-			currentMeal = meal;
-		},
+				getCurrentMeal : function () {
+					return currentMeal;
+				},
 
-		getCurrentMealStatus : function () {
-			return currentMealStatus;
-		},
+				setCurrentMeal : function (meal) {
+					currentMeal = meal;
+				},
 
-		setCurrentMealStatus : function (status) {
-			currentMealStatus = status;
-		},
+				getCurrentMealStatus : function () {
+					return currentMealStatus;
+				},
 
-		getCurrency : function () {
-			return currency;
-		},
+				setCurrentMealStatus : function (status) {
+					currentMealStatus = status;
+				},
 
-		getCurrentMealAmount : function () {
-			return currentAmount;
-		},
+				getCurrency : function () {
+					return currency;
+				},
 
-		setCurrentMealAmount : function (amount) {
-			currentAmount = amount;
-		},
-        
-        setCurrentMealById : function (id) {
+				getCurrentMealAmount : function () {
+					return currentAmount;
+				},
 
-			currentMeal = meals.products.filter((item) => item.id === id)[0];
+				setCurrentMealAmount : function (amount) {
+					currentAmount = amount;
+				},
 
-			if(!currentMeal) {
-				currentMeal = meals.drinks.filter((item) => item.id === id)[0];
-			}
-        }
-	};
-});
+				setCurrentMealById : function (id) {
+
+					currentMeal = meals.products.filter((item) => item.id === id)[0];
+
+					if(!currentMeal) {
+						currentMeal = meals.drinks.filter((item) => item.id === id)[0];
+					}
+				}
+			};
+		});
+})();

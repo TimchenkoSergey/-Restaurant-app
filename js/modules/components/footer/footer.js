@@ -1,8 +1,12 @@
-app.component("footerPage", {
-    templateUrl : "js/modules/components/footer/footerPage.html",
-    bindings : {},
-    controllerAs : "footer",
-    controller : [function () {
-        "use strict";
-    }]
-});
+(function() {
+    "use strict";
+
+    angular
+        .module("Meals")
+        .component("footerPage", {
+            templateUrl : "js/modules/components/footer/footerPage.html",
+            bindings : {},
+            controllerAs : "footer",
+            controller : [function () {}]
+        });
+})();
