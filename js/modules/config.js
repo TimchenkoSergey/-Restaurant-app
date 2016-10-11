@@ -24,10 +24,6 @@
                                        ui-sref-active="main-content__link--active">Напитки</a>
                                    <ui-view></ui-view>`
                 })
-                .state("error", {
-                    url: "/error",
-                    templateUrl: "js/modules/components/error/404Page.html"
-                })
                 .state("app.main.meals", {
                     url: "/meals",
                     template: "<meals-list id='mealsList'></meals-list>"
@@ -43,6 +39,10 @@
                 .state("app.cart", {
                     url: "/cart",
                     template: "<cart-page id='cart'></cart-page>"
+                })
+                .state("error", {
+                    url: "/error",
+                    template: "<error-page></error-page>"
                 });
 
             $urlRouterProvider.otherwise("/app/main/meals");

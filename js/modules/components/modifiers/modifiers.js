@@ -11,45 +11,19 @@
             controllerAs : "mod",
             controller : ["MealsFactory", "CartFactory", function (MealsFactory, CartFactory) {
 
-                const vm                 = this;
-                let selectedModifiers    = [],
-                    itemHasBeenSelected  = function (modifier) {
-                        return selectedModifiers.some((item) => modifier.name === item.name);
-                    },
-                    deleteModifier       = function (modifier) {
-                        return selectedModifiers.filter((item) => modifier.name !== item.name);
-                    },
-                    getCheckedModifiers  = function () {
-                        let cartList = CartFactory.getCartList(),
-                            meal;
+                const vm                = this;
+                let   selectedModifiers = [];
 
-                        meal = cartList.filter((item) => {
-                                return item.name === MealsFactory.getCurrentMeal().name;
-                    })[0];
+                vm.modifiers      = MealsFactory.getModifiers();
+                vm.selectModifier = selectModifier;
 
-                        return meal.modifiers;
-                    },
-                    pickCheckedModifiers = function (checkedModifiers) {
+                if(MealsFactory.getCurrentMealStatus() === "edit") {
+                    let checkedModifiers = getCheckedModifiers();
 
-                        if(checkedModifiers) {
+                    pickCheckedModifiers(checkedModifiers);
+                }
 
-                            for (let i = 0, lenChecked = checkedModifiers.length; i < lenChecked; i++) {
-
-                                for (let j = 0, len = vm.modifiers.length; j < len; j++) {
-
-                                    if (vm.modifiers[j].name === checkedModifiers[i].name) {
-
-                                        vm.modifiers[j].check = true;
-                                        vm.selectModifier(vm.modifiers[j]);
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-                vm.modifiers = MealsFactory.getModifiers();
-
-                vm.selectModifier = function (modifier) {
+                function selectModifier(modifier) {
 
                     if(!itemHasBeenSelected(modifier)) {
                         selectedModifiers.push(modifier);
@@ -59,11 +33,43 @@
                     }
 
                     CartFactory.addModifiersToList(selectedModifiers);
-                };
+                }
 
-                if(MealsFactory.getCurrentMealStatus() === "edit") {
-                    let checkedModifiers = getCheckedModifiers();
-                    pickCheckedModifiers(checkedModifiers);
+                function itemHasBeenSelected(modifier) {
+                    return selectedModifiers.some((item) => modifier.name === item.name);
+                }
+
+                function deleteModifier(modifier) {
+                    return selectedModifiers.filter((item) => modifier.name !== item.name);
+                }
+
+                function getCheckedModifiers() {
+                    let cartList = CartFactory.getCartList(),
+                        meal;
+
+                    meal = cartList.filter((item) => {
+                            return item.name === MealsFactory.getCurrentMeal().name;
+                    })[0];
+
+                    return meal.modifiers;
+                }
+
+                function pickCheckedModifiers(checkedModifiers) {
+
+                    if(checkedModifiers) {
+
+                        for (let i = 0, lenCheckedModifiers = checkedModifiers.length; i < lenCheckedModifiers; i++) {
+
+                            for (let j = 0, lenModifiers = vm.modifiers.length; j < lenModifiers; j++) {
+
+                                if (vm.modifiers[j].name === checkedModifiers[i].name) {
+
+                                    vm.modifiers[j].check = true;
+                                    vm.selectModifier(vm.modifiers[j]);
+                                }
+                            }
+                        }
+                    }
                 }
             }]
         });

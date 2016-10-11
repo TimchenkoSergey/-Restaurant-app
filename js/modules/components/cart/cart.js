@@ -13,14 +13,14 @@
 
                 vm.currency = MealsFactory.getCurrency();
                 vm.cartList = CartFactory.getCartList();
-                vm.total = CartFactory.getTotalPrice();
+                vm.total    = CartFactory.getTotalPrice();
+                vm.editMeal = editMeal;
 
-
-                vm.editMeal = function (meal) {
+                function editMeal(meal) {
                     MealsFactory.setCurrentMealById(meal.id);
                     MealsFactory.setCurrentMealAmount(meal.amount);
                     MealsFactory.setCurrentMealStatus("edit");
-                };
+                }
             }]
         });
 })();

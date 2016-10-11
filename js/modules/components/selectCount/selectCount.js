@@ -13,14 +13,16 @@
 
                 const vm = this;
 
-                vm.selectNum = function (num) {
+                vm.selectNum = selectNum;
+                vm.activeNum = activeNum;
+
+                function selectNum(num) {
                     vm.select = num;
-                };
+                }
 
-                vm.activeNum = function (num) {
+                function activeNum(num) {
                     return vm.select === num;
-                };
-
+                }
             }]
         });
 })();

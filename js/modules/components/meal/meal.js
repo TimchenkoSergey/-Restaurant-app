@@ -16,20 +16,23 @@
 				vm.selectAmount = MealsFactory.getCurrentMealAmount();
 				vm.mealStatus   = MealsFactory.getCurrentMealStatus();
 				vm.cartCount    = CartFactory.getCartListCount();
+				vm.addMeal      = addMeal;
+				vm.removeMeal   = removeMeal;
+				vm.saveMeal     = saveMeal;
 
-				vm.addMeal = function () {
+				function addMeal() {
 					CartFactory.addMealToCartList(vm.currentMeal, vm.selectAmount);
-				};
+				}
 
-				vm.removeMeal = function () {
+				function removeMeal() {
 					CartFactory.removeMeal(vm.currentMeal);
 					CartFactory.deleteModifiers();
-				};
+				}
 
-				vm.saveMeal = function () {
+				function saveMeal() {
 					CartFactory.removeMeal(vm.currentMeal);
 					vm.addMeal();
-				};
+				}
 			}]
 		});
 })();

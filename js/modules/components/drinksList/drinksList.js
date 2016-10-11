@@ -11,28 +11,33 @@
 
                 const vm          = this;
                 let drinks        = [];
-                vm.onlySoftDrinks = false;
+
+                vm.onlySoftDrinks   = false;
+                vm.openDrink        = openDrink;
+                vm.getDrinksForView = getDrinksForView;
 
                 MealsFactory.getMeals()
-                    .then(function (drinksObj) {
-                        vm.currency = drinksObj.currency;
-                        drinks = drinksObj.drinks;
-                    });
+                    .then(getDrinks);
 
-                vm.openDrink = function (drink) {
+                function openDrink(drink) {
                     MealsFactory.setCurrentMeal(drink);
                     MealsFactory.setCurrentMealStatus("new");
                     MealsFactory.setCurrentMealAmount(1);
-                };
+                }
 
-                vm.getDrinks = function () {
+                function getDrinksForView() {
                     if(!vm.onlySoftDrinks) {
                         return drinks;
                     }
                     else {
                         return drinks.filter((item) => item.tipple !== true);
                     }
-                };
+                }
+
+                function getDrinks(drinksObj) {
+                    vm.currency = drinksObj.currency;
+                    drinks      = drinksObj.drinks;
+                }
             }]
         });
 })();
