@@ -1,23 +1,23 @@
-<div class="main-content__wrap" ng-cloak>
+<div class="meals-list__wrap">
 
-	<header class="main-content__header">
-        <h2 class="main-content__head">Наши лучшие блюда</h2>
+	<header class="meals-list__header">
+        <h2 class="meals-list__head">Наши лучшие блюда</h2>
     </header>
 
-	<div class="main-content__line main-content__line--margin"></div>
+	<div class="meals-list__line meals-list__line--margin"></div>
 
-	<div class="main-content__meals">
+	<div class="meals-list__meals">
 
-		<div class="main-content__meal" ng-repeat="meal in mealsList.products">
-				<a class="main-content__link" ui-sref="app.meal" ng-click="mealsList.openMeal(meal)">
-					<div class="main-content__image">
-						<img class="main-content__picture" ng-src="{{ meal.image }}" alt="meal">
+		<div class="meals-list__meal" ng-repeat="meal in mealsList.products">
+				<a class="meals-list__link" ui-sref="app.meal({ path : 'meals' })" ng-click="mealsList.openMeal(meal)">
+					<div class="meals-list__image">
+						<img class="meals-list__picture" ng-src="{{ meal.image }}" alt="meal">
 					</div>
-					<p class="main-content__price">
+					<p class="meals-list__price">
 						{{ mealsList.currency + meal.price }}
 					</p>
-					<div class="main-content__line"></div>
-					<p class="main-content__name">
+					<div class="meals-list__line"></div>
+					<p class="meals-list__name">
 						{{ meal.name }}
 					</p>
 				</a>

@@ -1,4 +1,4 @@
-<div class="meal-page" ng-cloak>
+<div class="meal-page">
 
     <div class="meal-page__wrap">
 
@@ -25,12 +25,30 @@
 
         <div class="meal-page__buttons">
             <div class="meal-page__left">
-                <a class="meal-page__button meal-page__button--block" ui-sref="app.main.meals" ng-show="meal.mealStatus === 'new'">Вернуться</a>
-                <a class="meal-page__button meal-page__button--block" ui-sref="app.cart" ng-click="meal.removeMeal()" ng-show="meal.mealStatus === 'edit'">Удалить</a>
+                <a class="meal-page__button meal-page__button--block"
+                   ui-sref="app.main.meals"
+                   ng-show="meal.mealStatus === 'new' && meal.path === 'meals'">Вернуться
+                </a>
+                <a class="meal-page__button meal-page__button--block"
+                   ui-sref="app.main.drinks"
+                   ng-show="meal.mealStatus === 'new' && meal.path === 'drinks'">Вернуться
+                </a>
+                <a class="meal-page__button meal-page__button--block"
+                   ui-sref="app.cart" ng-click="meal.removeMeal()"
+                   ng-show="meal.mealStatus === 'edit'">Удалить
+                </a>
             </div>
             <div class="meal-page__right">
-                <a class="meal-page__button meal-page__button--block" ui-sref="app.cart" ng-click="meal.addMeal()" ng-show="meal.mealStatus === 'new'">+Добавить в корзину</a>
-                <a class="meal-page__button meal-page__button--block" ui-sref="app.cart" ng-click="meal.saveMeal()" ng-show="meal.mealStatus === 'edit'">Сохранить</a>
+                <a class="meal-page__button meal-page__button--block"
+                   ui-sref="app.cart"
+                   ng-click="meal.addMeal()"
+                   ng-show="meal.mealStatus === 'new'">+Добавить в корзину
+                </a>
+                <a class="meal-page__button meal-page__button--block"
+                   ui-sref="app.cart"
+                   ng-click="meal.saveMeal()"
+                   ng-show="meal.mealStatus === 'edit'">Сохранить
+                </a>
             </div>
         </div>
     </div>

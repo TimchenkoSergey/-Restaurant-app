@@ -9,10 +9,11 @@
             controllerAs : "drinksList",
             controller : ["MealsFactory", function (MealsFactory) {
 
-                const vm          = this;
-                let drinks        = [];
+                const vm     = this;
+                let   drinks = [];
 
                 vm.onlySoftDrinks   = false;
+                vm.currency         = "";
                 vm.openDrink        = openDrink;
                 vm.getDrinksForView = getDrinksForView;
 

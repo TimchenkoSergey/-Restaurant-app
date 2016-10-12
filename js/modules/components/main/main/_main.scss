@@ -1,0 +1,8 @@
+.main {
+  text-align: center;
+
+  @import "elements/_link";
+
+  @import "modifiers/_link--button";
+  @import "modifiers/_link--active";
+}

@@ -12,6 +12,25 @@
 				currentMealStatus = "new",
 				currentAmount     = 1;
 
+			function _getMealsHttp(deferred) {
+				
+				$http({method: "GET", url: mealApiUrl})
+					.success(function (data) {
+						meals    = data;
+						currency = data.currency;
+
+						deferred.resolve(data);
+					})
+					.error(function (data, status) {
+						deferred.reject("Error in $http request");
+
+						console.log(data);
+						console.log(status);
+					});
+
+				return deferred;
+			}
+
 			return {
 				getModifiers : function () {
 					if(currentMeal !== null) {
@@ -25,19 +44,12 @@
 				getMeals : function () {
 					let deferred = $q.defer();
 
-					$http({method: "GET", url: mealApiUrl})
-						.success(function (data) {
-							meals    = data;
-							currency = data.currency;
-
-							deferred.resolve(data);
-						})
-						.error(function (data, status) {
-							deferred.reject("Error in $http request");
-
-							console.log(data);
-							console.log(status);
-						});
+					if(!meals) {
+						deferred = _getMealsHttp(deferred);
+					}
+					else {
+						deferred.resolve(meals);
+					}
 
 					return deferred.promise;
 				},

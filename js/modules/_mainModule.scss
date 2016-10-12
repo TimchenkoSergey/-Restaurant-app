@@ -1,0 +1,29 @@
+.page {
+  margin: 0;
+  padding: 0;
+
+  background-color: #fff;
+
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: $font-family;
+  font-weight: bold;
+  line-height: $text-line;
+}
+
+@import "components/app/app/app";
+@import "components/error/error-page/error-page";
+@import "components/header/header/header";
+@import "components/logo/logo/logo";
+@import "components/menu/menu/menu";
+@import "components/main/main/main";
+@import "components/mealsList/meals-list/meals-list";
+@import "components/drinksList/drinks-list/drinks-list";
+@import "components/drinksList/active-button/active-button";
+@import "components/meal/meal-page/meal-page";
+@import "components/cartIcon/cart-icon/cart-icon";
+@import "components/selectCount/select-count/select-count";
+@import "components/selectCount/active/active";
+@import "components/modifiers/modifiers/modifiers";
+@import "components/cart/cart/cart";
+@import "components/footer/footer/footer";

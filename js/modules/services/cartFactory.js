@@ -3,77 +3,79 @@
 
     angular
         .module("Meals")
-        .factory("CartFactory", function () {
+        .factory("CartFactory", CartFactory);
 
-            let cartList          = [],
-                modifiers         = null,
-                getModifiersPrice = function (modifiersArr) {
-                    let totalPrice = 0;
+    function CartFactory() {
 
-                    for(let modifier of modifiersArr) {
-                        totalPrice += modifier.price;
-                    }
+        let cartList          = [],
+            modifiers         = null,
+            getModifiersPrice = function (modifiersArr) {
+                let totalPrice = 0;
 
-                    return totalPrice;
-                };
+                for(let modifier of modifiersArr) {
+                    totalPrice += modifier.price;
+                }
 
-            return {
-                getCartListCount : function () {
-                    return cartList.length;
-                },
+                return totalPrice;
+            };
 
-                addModifiersToList : function (mod) {
-                    modifiers = mod;
-                },
+        return {
+            getCartListCount : function () {
+                return cartList.length;
+            },
 
-                addMealToCartList : function (meal, amount) {
-                    let newMeal = {};
+            addModifiersToList : function (mod) {
+                modifiers = mod;
+            },
 
-                    newMeal.id        = meal.id;
-                    newMeal.name      = meal.name;
-                    newMeal.price     = meal.price;
-                    newMeal.amount    = amount;
+            addMealToCartList : function (meal, amount) {
+                let newMeal = {};
 
-                    if(modifiers) {
-                        newMeal.modifiers = modifiers.slice();
-                    }
+                newMeal.id        = meal.id;
+                newMeal.name      = meal.name;
+                newMeal.price     = meal.price;
+                newMeal.amount    = amount;
 
-                    modifiers = null;
-                    cartList.push(newMeal);
-                },
+                if(modifiers) {
+                    newMeal.modifiers = modifiers.slice();
+                }
 
-                getCartList : function () {
-                    return cartList;
-                },
+                modifiers = null;
+                cartList.push(newMeal);
+            },
 
-                getTotalPrice : function () {
-                    let total = 0;
+            getCartList : function () {
+                return cartList;
+            },
 
-                    if(cartList.length > 0) {
-                        for(let i = 0, len = cartList.length; i < len; i++) {
-                            total += cartList[i].price * cartList[i].amount;
+            getTotalPrice : function () {
+                let total = 0;
 
-                            if(cartList[i].modifiers) {
-                                total += getModifiersPrice(cartList[i].modifiers) * cartList[i].amount;
-                            }
-                        }
-                    }
-
-                    return total.toFixed(2);
-                },
-
-                deleteModifiers : function () {
-                    modifiers = null;
-                },
-
-                removeMeal : function (meal) {
-
+                if(cartList.length > 0) {
                     for(let i = 0, len = cartList.length; i < len; i++) {
-                        if(cartList[i].id === meal.id) {
-                            cartList.splice(i, 1);
+                        total += cartList[i].price * cartList[i].amount;
+
+                        if(cartList[i].modifiers) {
+                            total += getModifiersPrice(cartList[i].modifiers) * cartList[i].amount;
                         }
                     }
                 }
-            };
-        });
+
+                return total.toFixed(2);
+            },
+
+            deleteModifiers : function () {
+                modifiers = null;
+            },
+
+            removeMeal : function (meal) {
+
+                for(let i = 0, len = cartList.length; i < len; i++) {
+                    if(cartList[i].id === meal.id) {
+                        cartList.splice(i, 1);
+                    }
+                }
+            }
+        };
+    }
 })();

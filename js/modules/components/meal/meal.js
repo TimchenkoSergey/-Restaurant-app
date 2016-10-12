@@ -5,7 +5,9 @@
 		.module("Meals")
 		.component("mealPage", {
 			templateUrl : "js/modules/components/meal/mealPage.html",
-			bindings : {},
+			bindings : {
+				path: "@"
+			},
 			controllerAs : "meal",
 			controller : ["MealsFactory", "CartFactory", function (MealsFactory, CartFactory) {
 

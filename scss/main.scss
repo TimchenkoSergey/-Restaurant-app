@@ -1,17 +1,4 @@
 @import "variables";
 
-//imports blocks
-@import "blocks/page/_page";
-@import "blocks/header/_header";
-@import "blocks/logo/_logo";
-@import "blocks/menu/_menu";
-@import "blocks/main-content/_main-content";
-@import "blocks/meal-page/_meal-page";
-@import "blocks/modifiers/_modifiers";
-@import "blocks/cart-icon/_cart-icon";
-@import "blocks/active-button/_active-button";
-@import "blocks/active/_active";
-@import "blocks/select-count/_select-count";
-@import "blocks/cart/_cart";
-@import "blocks/footer/_footer";
-@import "blocks/error-page/_error-page";
+//imports modules
+@import "../js/modules/mainModule";

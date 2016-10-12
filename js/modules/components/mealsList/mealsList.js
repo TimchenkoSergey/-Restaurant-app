@@ -12,6 +12,8 @@
 				const vm = this;
 
 				vm.openMeal = openMeal;
+				vm.currency = "";
+				vm.products = null;
 
 				MealsFactory.getMeals()
 					.then(getProducts);

@@ -1,20 +1,18 @@
-.main-content {
+.drinks-list {
 	text-align: center;
 
 	@import "elements/_wrap";
 	@import "elements/_header";
 	@import "elements/_head";
 	@import "elements/_line";
+	@import "elements/_buttons";
+	@import "elements/_button";
 	@import "elements/_meal";
 	@import "elements/_link";
 	@import "elements/_image";
 	@import "elements/_picture";
 	@import "elements/_price";
 	@import "elements/_name";
-	@import "elements/_buttons";
-	@import "elements/_button";
 
 	@import "modifiers/_line--margin";
-	@import "modifiers/_link--button";
-	@import "modifiers/_link--active";
 }
