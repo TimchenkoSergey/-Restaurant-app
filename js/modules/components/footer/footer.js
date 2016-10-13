@@ -4,11 +4,11 @@
     angular
         .module("Meals")
         .component("footerPage", {
-            templateUrl : "js/modules/components/footer/footerPage.html",
+            templateUrl : "js/modules/components/footer/template/footerPage.html",
             bindings : {},
             controllerAs : "footer",
-            controller : [footerController]
+            controller : [FooterController]
         });
 
-    function footerController() {}
+    function FooterController() {}
 })();

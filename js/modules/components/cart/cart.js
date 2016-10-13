@@ -4,13 +4,13 @@
     angular
         .module("Meals")
         .component("cartPage", {
-            templateUrl : "js/modules/components/cart/cartPage.html",
+            templateUrl : "js/modules/components/cart/template/cartPage.html",
             bindings : {},
             controllerAs : "cart",
-            controller : ["MealsFactory", "CartFactory", cartController]
+            controller : ["MealsFactory", "CartFactory", CartController]
         });
     
-    function cartController(MealsFactory, CartFactory) {
+    function CartController(MealsFactory, CartFactory) {
         
         const vm = this;
 

@@ -12,7 +12,22 @@
 			currency          = "",
 			currentMeal       = null,
 			currentMealStatus = "new",
-			currentAmount     = 1;
+			currentAmount     = 1,
+
+			factory = {
+				getModifiers         : getModifiers,
+				getMeals             : getMeals,
+				getCurrentMeal       : getCurrentMeal,
+				setCurrentMeal       : setCurrentMeal,
+				getCurrentMealStatus : getCurrentMealStatus,
+				setCurrentMealStatus : setCurrentMealStatus,
+				getCurrency          : getCurrency,
+				getCurrentMealAmount : getCurrentMealAmount,
+				setCurrentMealAmount : setCurrentMealAmount,
+				setCurrentMealById   : setCurrentMealById
+			};
+
+		return factory;
 
 		function _getMealsHttp(deferred) {
 
@@ -33,65 +48,63 @@
 			return deferred;
 		}
 
-		return {
-			getModifiers : function () {
-				if(currentMeal !== null) {
-					return currentMeal.modifiers;
-				}
-				else {
-					return false;
-				}
-			},
-
-			getMeals : function () {
-				let deferred = $q.defer();
-
-				if(!meals) {
-					deferred = _getMealsHttp(deferred);
-				}
-				else {
-					deferred.resolve(meals);
-				}
-
-				return deferred.promise;
-			},
-
-			getCurrentMeal : function () {
-				return currentMeal;
-			},
-
-			setCurrentMeal : function (meal) {
-				currentMeal = meal;
-			},
-
-			getCurrentMealStatus : function () {
-				return currentMealStatus;
-			},
-
-			setCurrentMealStatus : function (status) {
-				currentMealStatus = status;
-			},
-
-			getCurrency : function () {
-				return currency;
-			},
-
-			getCurrentMealAmount : function () {
-				return currentAmount;
-			},
-
-			setCurrentMealAmount : function (amount) {
-				currentAmount = amount;
-			},
-
-			setCurrentMealById : function (id) {
-
-				currentMeal = meals.products.filter((item) => item.id === id)[0];
-
-				if(!currentMeal) {
-					currentMeal = meals.drinks.filter((item) => item.id === id)[0];
-				}
+		function getModifiers() {
+			if(currentMeal !== null) {
+				return currentMeal.modifiers;
 			}
-		};
+			else {
+				return false;
+			}
+		}
+
+		function getMeals() {
+			let deferred = $q.defer();
+
+			if(!meals) {
+				deferred = _getMealsHttp(deferred);
+			}
+			else {
+				deferred.resolve(meals);
+			}
+
+			return deferred.promise;
+		}
+
+		function getCurrentMeal() {
+			return currentMeal;
+		}
+
+		function setCurrentMeal(meal) {
+			currentMeal = meal;
+		}
+
+		function getCurrentMealStatus() {
+			return currentMealStatus;
+		}
+
+		function setCurrentMealStatus(status) {
+			currentMealStatus = status;
+		}
+
+		function getCurrency() {
+			return currency;
+		}
+
+		function getCurrentMealAmount() {
+			return currentAmount;
+		}
+
+		function setCurrentMealAmount(amount) {
+			currentAmount = amount;
+		}
+
+		function setCurrentMealById(id) {
+
+			currentMeal = meals.products.filter((item) => item.id === id)[0];
+
+			if(!currentMeal) {
+				currentMeal = meals.drinks.filter((item) => item.id === id)[0];
+			}
+		}
 	}
 })();

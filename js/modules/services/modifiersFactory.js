@@ -7,22 +7,31 @@
 
     function ModifiersFactory(CartFactory) {
 
-        return {
-            getCheckedModifiers : function () {
+        let factory = {
+            getCheckedModifiers  : getCheckedModifiers,
+            itemHasBeenSelected  : itemHasBeenSelected,
+            deleteModifier       : deleteModifier,
+            selectModifier       : selectModifier,
+            pickCheckedModifiers : pickCheckedModifiers
+        };
+
+        return factory;
+
+        function getCheckedModifiers() {
                 let cartList = CartFactory.getCartList()[CartFactory.getIndex()];
 
                 return cartList.modifiers;
-            },
+            }
 
-            itemHasBeenSelected : function (selectedModifiers, modifier) {
+        function itemHasBeenSelected(selectedModifiers, modifier) {
                 return selectedModifiers.some((item) => modifier.name === item.name);
-            },
+            }
 
-            deleteModifier : function (selectedModifiers, modifier) {
+        function deleteModifier(selectedModifiers, modifier) {
                 return selectedModifiers.filter((item) => modifier.name !== item.name);
-            },
+            }
 
-            selectModifier : function (selectedModifiers, modifier) {
+        function selectModifier(selectedModifiers, modifier) {
 
                 const that = this;
 
@@ -34,9 +43,9 @@
                 }
 
                 CartFactory.addModifiersToList(selectedModifiers);
-            },
+            }
 
-            pickCheckedModifiers : function (modifiers, selectedModifiers, checkedModifiers) {
+        function pickCheckedModifiers(modifiers, selectedModifiers, checkedModifiers) {
                 const that = this;
 
                 if(checkedModifiers) {
@@ -54,6 +63,5 @@
                     }
                 }
             }
-        };
     }
 })();

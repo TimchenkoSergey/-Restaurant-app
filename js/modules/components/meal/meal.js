@@ -4,15 +4,15 @@
 	angular
 		.module("Meals")
 		.component("mealPage", {
-			templateUrl : "js/modules/components/meal/mealPage.html",
+			templateUrl : "js/modules/components/meal/template/mealPage.html",
 			bindings : {
 				path: "@"
 			},
 			controllerAs : "meal",
-			controller : ["MealsFactory", "CartFactory", mealController]
+			controller : ["MealsFactory", "CartFactory", MealController]
 		});
 
-	function mealController(MealsFactory, CartFactory) {
+	function MealController(MealsFactory, CartFactory) {
 
 		const vm = this;
 

@@ -4,13 +4,13 @@
     angular
         .module("Meals")
         .component("cartIconPage", {
-            templateUrl : "js/modules/components/cartIcon/cartIconPage.html",
+            templateUrl : "js/modules/components/cartIcon/template/cartIconPage.html",
             bindings : {
                 count: "@"
             },
             controllerAs : "cartIcon",
-            controller : [cartIconController]
+            controller : [CartIconController]
         });
 
-    function cartIconController() {}
+    function CartIconController() {}
 })();

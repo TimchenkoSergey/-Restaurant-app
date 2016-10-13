@@ -18,68 +18,80 @@
                 }
 
                 return totalPrice;
+            },
+
+            factory = {
+                getIndex           : getIndex,
+                setIndex           : setIndex,
+                getCartListCount   : getCartListCount,
+                addModifiersToList : addModifiersToList,
+                addMealToCartList  : addMealToCartList,
+                getCartList        : getCartList,
+                getTotalPrice      : getTotalPrice,
+                deleteModifiers    : deleteModifiers,
+                removeMeal         : removeMeal
             };
 
-        return {
-            getIndex : function () {
-                return index;
-            },
+        return factory;
 
-            setIndex : function (ind) {
-                index = ind;
-            },
+        function getIndex() {
+            return index;
+        }
 
-            getCartListCount : function () {
-                return cartList.length;
-            },
+        function setIndex(ind) {
+            index = ind;
+        }
 
-            addModifiersToList : function (mod) {
-                modifiers = mod;
-            },
+        function getCartListCount() {
+            return cartList.length;
+        }
 
-            addMealToCartList : function (meal, amount) {
-                let newMeal = {};
+        function addModifiersToList(mod) {
+            modifiers = mod;
+        }
 
-                newMeal.id        = meal.id;
-                newMeal.name      = meal.name;
-                newMeal.price     = meal.price;
-                newMeal.amount    = amount;
+        function addMealToCartList(meal, amount) {
+            let newMeal = {};
 
-                if(modifiers) {
-                    newMeal.modifiers = modifiers.slice();
-                }
+            newMeal.id        = meal.id;
+            newMeal.name      = meal.name;
+            newMeal.price     = meal.price;
+            newMeal.amount    = amount;
 
-                modifiers = null;
-                cartList.push(newMeal);
-            },
+            if(modifiers) {
+                newMeal.modifiers = modifiers.slice();
+            }
 
-            getCartList : function () {
-                return cartList;
-            },
+            modifiers = null;
+            cartList.push(newMeal);
+        }
 
-            getTotalPrice : function () {
-                let total = 0;
+        function getCartList() {
+            return cartList;
+        }
 
-                if(cartList.length > 0) {
-                    for(let i = 0, len = cartList.length; i < len; i++) {
-                        total += cartList[i].price * cartList[i].amount;
+        function getTotalPrice() {
+            let total = 0;
 
-                        if(cartList[i].modifiers) {
-                            total += getModifiersPrice(cartList[i].modifiers) * cartList[i].amount;
-                        }
+            if(cartList.length > 0) {
+                for(let i = 0, len = cartList.length; i < len; i++) {
+                    total += cartList[i].price * cartList[i].amount;
+
+                    if(cartList[i].modifiers) {
+                        total += getModifiersPrice(cartList[i].modifiers) * cartList[i].amount;
                     }
                 }
-
-                return total.toFixed(2);
-            },
-
-            deleteModifiers : function () {
-                modifiers = null;
-            },
-
-            removeMeal : function () {
-                cartList.splice(index,1);
             }
-        };
+
+            return total.toFixed(2);
+        }
+
+        function deleteModifiers() {
+            modifiers = null;
+        }
+
+        function removeMeal() {
+            cartList.splice(index,1);
+        }
     }
 })();

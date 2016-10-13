@@ -4,11 +4,11 @@
     angular
         .module("Meals")
         .component("logoPage", {
-            templateUrl : "js/modules/components/logo/logoPage.html",
+            templateUrl : "js/modules/components/logo/template/logoPage.html",
             bindings : {},
             controllerAs : "logo",
-            controller : [logoController]
+            controller : [LogoController]
         });
 
-    function logoController() {}
+    function LogoController() {}
 })();

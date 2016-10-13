@@ -4,11 +4,11 @@
     angular
         .module("Meals")
         .component("menuPage", {
-            templateUrl : "js/modules/components/menu/menuPage.html",
+            templateUrl : "js/modules/components/menu/template/menuPage.html",
             bindings : {},
             controllerAs : "menu",
-            controller : [menuController]
+            controller : [MenuController]
         });
 
-    function menuController() {}
+    function MenuController() {}
 })();

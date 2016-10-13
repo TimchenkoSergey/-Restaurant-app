@@ -27,9 +27,7 @@
             .state("app.meal", {
                 url: "/meal/:path",
                 controllerAs: "ctrl",
-                controller: function ($stateParams) {
-                    this.path = $stateParams.path;
-                },
+                controller: ["$stateParams", MealController],
                 template: "<meal-page id='meal' path='{{ ctrl.path }}'></meal-page>",
             })
             .state("app.cart", {
@@ -42,5 +40,9 @@
             });
 
         $urlRouterProvider.otherwise("/app/main/meals");
+    }
+
+    function MealController($stateParams) {
+        this.path = $stateParams.path;
     }
 })();

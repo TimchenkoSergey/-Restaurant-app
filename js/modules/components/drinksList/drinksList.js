@@ -4,13 +4,13 @@
     angular
         .module("Meals")
         .component("drinksList", {
-            templateUrl : "js/modules/components/drinksList/drinksList.html",
+            templateUrl : "js/modules/components/drinksList/template/drinksList.html",
             bindings : {},
             controllerAs : "drinksList",
-            controller : ["MealsFactory", drinksListController]
+            controller : ["MealsFactory", DrinksListController]
         });
     
-    function drinksListController(MealsFactory) {
+    function DrinksListController(MealsFactory) {
 
         const vm     = this;
         let   drinks = [];
@@ -20,8 +20,17 @@
         vm.openDrink        = openDrink;
         vm.getDrinksForView = getDrinksForView;
 
-        MealsFactory.getMeals()
-            .then(getDrinks);
+        activate();
+
+        function activate() {
+            MealsFactory.getMeals()
+                .then(getDrinks);
+        }
+
+        function getDrinks(drinksObj) {
+            vm.currency = drinksObj.currency;
+            drinks      = drinksObj.drinks;
+        }
 
         function openDrink(drink) {
             MealsFactory.setCurrentMeal(drink);
@@ -36,11 +45,6 @@
             else {
                 return drinks.filter((item) => item.tipple !== true);
             }
-        }
-
-        function getDrinks(drinksObj) {
-            vm.currency = drinksObj.currency;
-            drinks      = drinksObj.drinks;
         }
     }
 })();

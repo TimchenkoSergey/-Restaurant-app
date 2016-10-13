@@ -4,11 +4,11 @@
     angular
         .module("Meals")
         .component("headerPage", {
-            templateUrl : "js/modules/components/header/headerPage.html",
+            templateUrl : "js/modules/components/header/template/headerPage.html",
             bindings : {},
             controllerAs : "header",
-            controller : [headerController]
+            controller : [HeaderController]
         });
 
-    function headerController() {}
+    function HeaderController() {}
 })();

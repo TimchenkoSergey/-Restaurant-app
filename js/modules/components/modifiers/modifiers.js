@@ -4,15 +4,15 @@
     angular
         .module("Meals")
         .component("modifiersPage", {
-            templateUrl : "js/modules/components/modifiers/modifiersPage.html",
+            templateUrl : "js/modules/components/modifiers/template/modifiersPage.html",
             bindings : {
                 currency: "@"
             },
             controllerAs : "mod",
-            controller : ["MealsFactory", "ModifiersFactory", modifiersController]
+            controller : ["MealsFactory", "ModifiersFactory", ModifiersController]
         });
 
-    function modifiersController(MealsFactory, ModifiersFactory) {
+    function ModifiersController(MealsFactory, ModifiersFactory) {
 
         const vm                = this;
         let   selectedModifiers = [];

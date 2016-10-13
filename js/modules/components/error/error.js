@@ -4,11 +4,11 @@
     angular
         .module("Meals")
         .component("errorPage", {
-            templateUrl : "js/modules/components/error/errorPage.html",
+            templateUrl : "js/modules/components/error/template/errorPage.html",
             bindings : {},
             controllerAs : "error",
-            controller : [errorController]
+            controller : [ErrorController]
         });
 
-    function errorController() {}
+    function ErrorController() {}
 })();

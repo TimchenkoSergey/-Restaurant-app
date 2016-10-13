@@ -4,15 +4,15 @@
     angular
         .module("Meals")
         .component("selectCount", {
-            templateUrl : "js/modules/components/selectCount/selectCountPage.html",
+            templateUrl : "js/modules/components/selectCount/template/selectCountPage.html",
             bindings : {
                 select: "="
             },
             controllerAs : "select",
-            controller : [selectCountController]
+            controller : [SelectCountController]
         });
 
-    function selectCountController() {
+    function SelectCountController() {
 
         const vm = this;
 
