@@ -78,14 +78,7 @@
             },
 
             removeMeal : function () {
-
                 cartList.splice(index,1);
-  /*              for(let i = 0, len = cartList.length; i < len; i++) {
-                    if(cartList[i].id === meal.id) {
-                        cartList.splice(i, 1);
-                        break;
-                    }
-                }*/
             }
         };
     }

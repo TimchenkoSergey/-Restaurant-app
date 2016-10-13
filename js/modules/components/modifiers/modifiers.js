@@ -9,30 +9,33 @@
                 currency: "@"
             },
             controllerAs : "mod",
-            controller : ["MealsFactory", "ModifiersFactory",
-                         function (MealsFactory, ModifiersFactory) {
-
-                const vm                = this;
-                let   selectedModifiers = [];
-
-                vm.modifiers      = MealsFactory.getModifiers();
-                vm.selectModifier = selectModifier;
-                
-                unPickModifiers();
-
-                if(MealsFactory.getCurrentMealStatus() === "edit") {
-                    let checkedModifiers = ModifiersFactory.getCheckedModifiers();
-
-                    ModifiersFactory.pickCheckedModifiers(vm.modifiers, selectedModifiers, checkedModifiers);
-                }
-
-                function unPickModifiers() {
-                    vm.modifiers.forEach((item) => item.check = false);
-                }
-
-                function selectModifier(modifier) {
-                    ModifiersFactory.selectModifier(selectedModifiers, modifier);
-                }
-            }]
+            controller : ["MealsFactory", "ModifiersFactory", modifiersController]
         });
+
+    function modifiersController(MealsFactory, ModifiersFactory) {
+
+        const vm                = this;
+        let   selectedModifiers = [];
+
+        vm.modifiers      = MealsFactory.getModifiers();
+        vm.selectModifier = selectModifier;
+
+        unPickModifiers();
+
+        if(MealsFactory.getCurrentMealStatus() === "edit") {
+            let checkedModifiers = ModifiersFactory.getCheckedModifiers();
+
+            ModifiersFactory.pickCheckedModifiers(vm.modifiers, selectedModifiers, checkedModifiers);
+        }
+
+        function unPickModifiers() {
+            if(vm.modifiers) {
+                vm.modifiers.forEach((item) => item.check = false);
+            }
+        }
+
+        function selectModifier(modifier) {
+            ModifiersFactory.selectModifier(selectedModifiers, modifier);
+        }
+    }
 })();

@@ -9,21 +9,22 @@
                 select: "="
             },
             controllerAs : "select",
-            controller : [function () {
-
-                const vm = this;
-
-                vm.selectNum = selectNum;
-                vm.activeNum = activeNum;
-
-                function selectNum(num) {
-                    vm.select = num;
-                }
-
-                function activeNum(num) {
-                    return vm.select === num;
-                }
-            }]
+            controller : [selectCountController]
         });
 
+    function selectCountController() {
+
+        const vm = this;
+
+        vm.selectNum = selectNum;
+        vm.activeNum = activeNum;
+
+        function selectNum(num) {
+            vm.select = num;
+        }
+
+        function activeNum(num) {
+            return vm.select === num;
+        }
+    }
 })();

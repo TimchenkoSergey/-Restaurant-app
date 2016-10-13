@@ -11,6 +11,7 @@
         });
     
     function cartController(MealsFactory, CartFactory) {
+        
         const vm = this;
 
         vm.currency = MealsFactory.getCurrency();

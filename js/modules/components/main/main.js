@@ -7,10 +7,8 @@
             templateUrl : "js/modules/components/main/mainPage.html",
             bindings : {},
             controllerAs : "main",
-            controller : [function () {}]
+            controller : [mainController]
         });
     
-    function () {
-        
-    }
+    function mainController() {}
 })();

@@ -15,7 +15,9 @@
 
         <div class="drinks-list__meal-wrap" ng-if="!drinksList.onlySoftDrinks">
             <div class="drinks-list__meal" ng-repeat="drink in drinksList.getDrinksForView()">
-            <a class="drinks-list__link" ui-sref="app.meal({ path : 'drinks' })" ng-click="drinksList.openDrink(drink)">
+            <a class="drinks-list__link"
+               ui-sref="app.meal({ path : 'drinks' })"
+               ng-click="drinksList.openDrink(drink)">
                 <div class="drinks-list__image">
                     <img class="drinks-list__picture" ng-src="{{ drink.image }}" alt="drink">
                 </div>
@@ -32,7 +34,9 @@
 
         <div class="drinks-list__meal-wrap" ng-if="drinksList.onlySoftDrinks">
             <div class="drinks-list__meal" ng-repeat="drink in drinksList.getDrinksForView()">
-            <a class="drinks-list__link" ui-sref="app.meal({ path : 'drinks' })" ng-click="drinksList.openDrink(drink)">
+            <a class="drinks-list__link"
+               ui-sref="app.meal({ path : 'drinks' })"
+               ng-click="drinksList.openDrink(drink)">
                 <div class="drinks-list__image">
                     <img class="drinks-list__picture" ng-src="{{ drink.image }}" alt="drink">
                 </div>

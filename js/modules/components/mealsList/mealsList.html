@@ -9,7 +9,8 @@
 	<div class="meals-list__meals">
 
 		<div class="meals-list__meal" ng-repeat="meal in mealsList.products">
-				<a class="meals-list__link" ui-sref="app.meal({ path : 'meals' })" ng-click="mealsList.openMeal(meal)">
+				<a class="meals-list__link" ui-sref="app.meal({ path : 'meals' })"
+				   ng-click="mealsList.openMeal(meal)">
 					<div class="meals-list__image">
 						<img class="meals-list__picture" ng-src="{{ meal.image }}" alt="meal">
 					</div>
