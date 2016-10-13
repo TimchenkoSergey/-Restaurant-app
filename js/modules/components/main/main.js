@@ -9,4 +9,8 @@
             controllerAs : "main",
             controller : [function () {}]
         });
+    
+    function () {
+        
+    }
 })();

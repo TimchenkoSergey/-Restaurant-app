@@ -7,6 +7,8 @@
             templateUrl : "js/modules/components/app/appPage.html",
             bindings : {},
             controllerAs : "app",
-            controller : [function () {}]
+            controller : [appController]
         });
+
+    function appController() {}
 })();

@@ -27,12 +27,12 @@
 				}
 
 				function removeMeal() {
-					CartFactory.removeMeal(vm.currentMeal);
+					CartFactory.removeMeal();
 					CartFactory.deleteModifiers();
 				}
 
 				function saveMeal() {
-					CartFactory.removeMeal(vm.currentMeal);
+					CartFactory.removeMeal();
 					vm.addMeal();
 				}
 			}]

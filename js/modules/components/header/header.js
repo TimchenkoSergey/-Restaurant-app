@@ -7,6 +7,8 @@
             templateUrl : "js/modules/components/header/headerPage.html",
             bindings : {},
             controllerAs : "header",
-            controller : [function () {}]
+            controller : [headerController]
         });
+
+    function headerController() {}
 })();

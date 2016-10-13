@@ -9,6 +9,8 @@
                 count: "@"
             },
             controllerAs : "cartIcon",
-            controller : [function () {}]
+            controller : [cartIconController]
         });
+
+    function cartIconController() {}
 })();

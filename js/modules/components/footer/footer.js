@@ -7,6 +7,8 @@
             templateUrl : "js/modules/components/footer/footerPage.html",
             bindings : {},
             controllerAs : "footer",
-            controller : [function () {}]
+            controller : [footerController]
         });
+
+    function footerController() {}
 })();

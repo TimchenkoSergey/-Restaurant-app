@@ -3,12 +3,13 @@
 
     angular
         .module("Meals")
-        .factory("CartFactory", CartFactory);
+        .factory("CartFactory", [CartFactory]);
 
     function CartFactory() {
 
         let cartList          = [],
             modifiers         = null,
+            index             = 0,
             getModifiersPrice = function (modifiersArr) {
                 let totalPrice = 0;
 
@@ -20,6 +21,14 @@
             };
 
         return {
+            getIndex : function () {
+                return index;
+            },
+
+            setIndex : function (ind) {
+                index = ind;
+            },
+
             getCartListCount : function () {
                 return cartList.length;
             },
@@ -68,13 +77,15 @@
                 modifiers = null;
             },
 
-            removeMeal : function (meal) {
+            removeMeal : function () {
 
-                for(let i = 0, len = cartList.length; i < len; i++) {
+                cartList.splice(index,1);
+  /*              for(let i = 0, len = cartList.length; i < len; i++) {
                     if(cartList[i].id === meal.id) {
                         cartList.splice(i, 1);
+                        break;
                     }
-                }
+                }*/
             }
         };
     }

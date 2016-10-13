@@ -7,6 +7,8 @@
             templateUrl : "js/modules/components/logo/logoPage.html",
             bindings : {},
             controllerAs : "logo",
-            controller : [function () {}]
+            controller : [logoController]
         });
+
+    function logoController() {}
 })();

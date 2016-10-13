@@ -7,6 +7,8 @@
             templateUrl : "js/modules/components/error/errorPage.html",
             bindings : {},
             controllerAs : "error",
-            controller : [function () {}]
+            controller : [errorController]
         });
+
+    function errorController() {}
 })();
