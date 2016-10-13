@@ -39,11 +39,11 @@
         }
 
         function getDrinksForView() {
-            if(!vm.onlySoftDrinks) {
-                return drinks;
+            if (vm.onlySoftDrinks) {
+                return drinks.filter((item) => item.tipple !== true);
             }
             else {
-                return drinks.filter((item) => item.tipple !== true);
+                return drinks;
             }
         }
     }

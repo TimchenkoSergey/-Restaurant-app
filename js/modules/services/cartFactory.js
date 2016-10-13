@@ -9,20 +9,11 @@
 
         let cartList          = [],
             modifiers         = null,
-            index             = 0,
-            getModifiersPrice = function (modifiersArr) {
-                let totalPrice = 0;
-
-                for(let modifier of modifiersArr) {
-                    totalPrice += modifier.price;
-                }
-
-                return totalPrice;
-            },
+            indexEditMeal     = 0,
 
             factory = {
-                getIndex           : getIndex,
-                setIndex           : setIndex,
+                getIndexEditMeal   : getIndexEditMeal,
+                setIndexEditMeal   : setIndexEditMeal,
                 getCartListCount   : getCartListCount,
                 addModifiersToList : addModifiersToList,
                 addMealToCartList  : addMealToCartList,
@@ -34,20 +25,30 @@
 
         return factory;
 
-        function getIndex() {
-            return index;
+        function getModifiersPrice(modifiersArr) {
+            let totalPrice = 0;
+
+            for (let modifier of modifiersArr) {
+                totalPrice += modifier.price;
+            }
+
+            return totalPrice;
         }
 
-        function setIndex(ind) {
-            index = ind;
+        function getIndexEditMeal() {
+            return indexEditMeal;
+        }
+
+        function setIndexEditMeal(index) {
+            indexEditMeal = index;
         }
 
         function getCartListCount() {
             return cartList.length;
         }
 
-        function addModifiersToList(mod) {
-            modifiers = mod;
+        function addModifiersToList(modif) {
+            modifiers = modif;
         }
 
         function addMealToCartList(meal, amount) {
@@ -58,7 +59,7 @@
             newMeal.price     = meal.price;
             newMeal.amount    = amount;
 
-            if(modifiers) {
+            if (modifiers) {
                 newMeal.modifiers = modifiers.slice();
             }
 
@@ -71,19 +72,20 @@
         }
 
         function getTotalPrice() {
-            let total = 0;
+            let totalPrice = 0;
 
-            if(cartList.length > 0) {
-                for(let i = 0, len = cartList.length; i < len; i++) {
-                    total += cartList[i].price * cartList[i].amount;
+            if (cartList.length > 0) {
+                for (let i = 0, len = cartList.length; i < len; i++) {
 
-                    if(cartList[i].modifiers) {
-                        total += getModifiersPrice(cartList[i].modifiers) * cartList[i].amount;
+                    totalPrice += cartList[i].price * cartList[i].amount;
+
+                    if (cartList[i].modifiers) {
+                        totalPrice += getModifiersPrice(cartList[i].modifiers) * cartList[i].amount;
                     }
                 }
             }
 
-            return total.toFixed(2);
+            return totalPrice.toFixed(2);
         }
 
         function deleteModifiers() {
@@ -91,7 +93,7 @@
         }
 
         function removeMeal() {
-            cartList.splice(index,1);
+            cartList.splice(indexEditMeal, 1);
         }
     }
 })();

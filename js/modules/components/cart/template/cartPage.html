@@ -6,7 +6,7 @@
 	</header>
 
 	<div class="cart__content">
-		<div class="cart__empty" ng-hide="cart.total > 0">
+		<div class="cart__empty" ng-hide="cart.totalPrice > 0">
 			Корзина пуста
 		</div>
 
@@ -47,11 +47,11 @@
 		</div>
 	</div>
 
-	<div class="cart__totals" ng-if="cart.total > 0">
-		<div class="cart__text">Итог: {{ cart.currency + cart.total }}</div>
+	<div class="cart__totals" ng-if="cart.totalPrice > 0">
+		<div class="cart__text">Итог: {{ cart.currency + cart.totalPrice }}</div>
 	</div>
 
-	<div class="cart__checkout" ng-if="cart.total > 0">
+	<div class="cart__checkout" ng-if="cart.totalPrice > 0">
 		<button class="cart__button">Оплатить</button>
 	</div>
 

@@ -20,16 +20,16 @@
         vm.modifiers      = MealsFactory.getModifiers();
         vm.selectModifier = selectModifier;
 
-        unPickModifiers();
+        cleanPickModifiers();
 
-        if(MealsFactory.getCurrentMealStatus() === "edit") {
+        if (MealsFactory.getCurrentMealStatus() === "edit") {
             let checkedModifiers = ModifiersFactory.getCheckedModifiers();
 
             ModifiersFactory.pickCheckedModifiers(vm.modifiers, selectedModifiers, checkedModifiers);
         }
 
-        function unPickModifiers() {
-            if(vm.modifiers) {
+        function cleanPickModifiers() {
+            if (vm.modifiers) {
                 vm.modifiers.forEach((item) => item.check = false);
             }
         }

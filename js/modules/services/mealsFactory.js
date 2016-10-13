@@ -29,9 +29,9 @@
 
 		return factory;
 
-		function _getMealsHttp(deferred) {
+		function getMealsFromHttp(deferred) {
 
-			$http({method: "GET", url: mealApiUrl})
+			$http({method : "GET", url : mealApiUrl})
 				.success(function (data) {
 					meals    = data;
 					currency = data.currency;
@@ -49,7 +49,8 @@
 		}
 
 		function getModifiers() {
-			if(currentMeal !== null) {
+
+			if (currentMeal !== null) {
 				return currentMeal.modifiers;
 			}
 			else {
@@ -60,8 +61,8 @@
 		function getMeals() {
 			let deferred = $q.defer();
 
-			if(!meals) {
-				deferred = _getMealsHttp(deferred);
+			if (!meals) {
+				deferred = getMealsFromHttp(deferred);
 			}
 			else {
 				deferred.resolve(meals);
@@ -102,7 +103,7 @@
 
 			currentMeal = meals.products.filter((item) => item.id === id)[0];
 
-			if(!currentMeal) {
+			if (!currentMeal) {
 				currentMeal = meals.drinks.filter((item) => item.id === id)[0];
 			}
 		}
