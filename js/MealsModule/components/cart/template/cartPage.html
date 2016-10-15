@@ -1,0 +1,58 @@
+<div class="cart animated fadeIn" id="cart">
+
+	<header class="cart__header">
+		<h1 class="cart__head">Корзина</h1>
+		<a class="cart__button" ui-sref="app.main.meals">Главная</a>
+	</header>
+
+	<div class="cart__content">
+		<div class="cart__empty" ng-hide="cart.totalPrice > 0">
+			Корзина пуста
+		</div>
+
+		<div class="cart__items" ng-show="cart.cartList">
+			<ul class="cart__list">
+				<li class="cart__item" ng-repeat="meal in cart.cartList">
+					<div class="cart__element">
+						<div class="cart__description">
+							<div class="cart__meal">
+								{{ meal.name }} x {{ meal.amount }}
+							</div>
+							<div class="cart__price">
+								{{ cart.currency + meal.price }}
+							</div>
+							<div class="cart__modifiers" ng-repeat="modifier in meal.modifiers">
+								{{ modifier.name + " " + modifier.price }}
+							</div>
+						</div>
+						<a class="cart__edit" ui-sref="app.meal" ng-click="cart.editMeal(meal, $index)">
+							<svg class="cart__icon" xmlns="http://www.w3.org/2000/svg"
+								 width="512" height="512" viewBox="0 0 512 512">
+								<path class="cart__path" d="M493.3 154.5l-22.6 22.6L334.9
+								 41.4l22.6-22.6c25-25 65.5-25 90.5 0l45.3 45.3C518.2 89
+								  518.2 129.5 493.3 154.5zM176.5 426c-6.2 6.3-6.2 16.4 0
+								   22.6 6.3 6.3 16.4 6.3 22.6 0l248.9-248.9 -22.7-22.6L176.5
+								   426zM63.3 312.9c-6.2 6.3-6.2 16.4 0 22.6s16.4 6.3 22.6 0L334.9
+								   86.6l-22.6-22.6L63.3 312.9zM357.5 109.3L108.6 358.2c-12.5 12.5-12.5
+								   32.8 0 45.3 12.5 12.5 32.8 12.6 45.3 0l248.9-248.9L357.5 109.3zM153.8
+								   471.2c-7.7-7.7-11.3-17.4-12.7-27.4 -3.2 0.5-6.5 1-9.9 1 -17.1
+								   0-33.2-6.7-45.2-18.8 -12.1-12.1-18.7-28.2-18.7-45.2 0-3.1 0.5-6.2 0.9-9.2
+								   -10.3-1.4-19.9-5.9-27.4-13.4 -0.7-0.7-1-1.7-1.6-2.5L0 512l155.9-39C155.2
+								   472.3 154.4 471.9 153.8 471.2z"/>
+							</svg>
+						</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="cart__totals" ng-if="cart.totalPrice > 0">
+		<div class="cart__text">Итог: {{ cart.currency + cart.totalPrice }}</div>
+	</div>
+
+	<div class="cart__checkout" ng-if="cart.totalPrice > 0">
+		<button class="cart__button">Оплатить</button>
+	</div>
+
+</div>

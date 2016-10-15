@@ -1,0 +1,49 @@
+(function() {
+    "use strict";
+
+    angular
+        .module("Meals")
+        .component("drinksList", {
+            templateUrl : "component-templates/drinksList/template/drinksList.html",
+            bindings : {},
+            controllerAs : "drinksList",
+            controller : DrinksListController
+        });
+    
+    function DrinksListController(MealsFactory) {
+
+        const vm     = this;
+        let   drinks = [];
+
+        vm.onlySoftDrinks   = false;
+        vm.currency         = "";
+        vm.openDrink        = openDrink;
+        vm.getDrinksForView = getDrinksForView;
+
+        activate();
+
+        function activate() {
+            MealsFactory.getMeals()
+                .then(getDrinks);
+        }
+
+        function getDrinks(drinksObj) {
+            vm.currency = drinksObj.currency;
+            drinks      = drinksObj.drinks;
+        }
+
+        function openDrink(drink) {
+            MealsFactory.openMeal(drink, "new", 1);
+        }
+
+        function getDrinksForView() {
+
+            if (vm.onlySoftDrinks) {
+                return drinks.filter((item) => item.tipple !== true);
+            }
+            else {
+                return drinks;
+            }
+        }
+    }
+})();
