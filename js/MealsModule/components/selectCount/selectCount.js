@@ -11,7 +11,7 @@
             controllerAs : "select",
             controller : SelectCountController
         });
-
+    
     function SelectCountController() {
 
         const vm = this;

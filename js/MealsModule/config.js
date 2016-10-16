@@ -4,7 +4,7 @@
     angular
         .module("Meals")
         .config(config);
-
+    
     function config($stateProvider, $urlRouterProvider) {
 
         $stateProvider

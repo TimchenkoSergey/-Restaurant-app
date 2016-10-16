@@ -9,7 +9,8 @@ const gulp       = require("gulp"),
       sourcemaps = require('gulp-sourcemaps'),
       uglify     = require('gulp-uglify'),
       ngAnnotate = require('gulp-ng-annotate'),
-      babel      = require('gulp-babel');
+      babel      = require('gulp-babel'),
+	  gulpDocs   = require('gulp-ngdocs');
 
 gulp.task("css", function() {
 	gulp.src([
@@ -57,8 +58,14 @@ gulp.task("templates", function () {
 		.pipe(gulp.dest("app/component-templates/"));
 });
 
+gulp.task("ngdocs", [], function () {
+	gulp.src("js/MealsModule/**/*.js")
+		.pipe(gulpDocs.process())
+		.pipe(gulp.dest("./docs"));
+});
+
 gulp.task("watch", function() {
 	gulp.watch("scss/*.scss", ["css"]);
 });
 
-gulp.task("default", ["js", "css", "concat", "templates"]);
+gulp.task("default", ["js", "css", "concat", "templates", "ngdocs"]);
