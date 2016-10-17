@@ -68,4 +68,4 @@ gulp.task("watch", function() {
 	gulp.watch("scss/*.scss", ["css"]);
 });
 
-gulp.task("default", ["js", "css", "concat", "templates", "ngdocs"]);
+gulp.task("default", ["js", "css", "concat", "templates", "ngdocs", ]);

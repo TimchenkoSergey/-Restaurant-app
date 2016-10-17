@@ -2,5 +2,7 @@
     "use strict";
 
     angular
-        .module("Meals", ["ui.router"]);
+        .module("Meals", [
+            "ui.router"
+        ]);
 })();

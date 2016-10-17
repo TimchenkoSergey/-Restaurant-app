@@ -28,7 +28,8 @@
                 getCartList        : getCartList,
                 getTotalPrice      : getTotalPrice,
                 deleteModifiers    : deleteModifiers,
-                removeMeal         : removeMeal
+                removeMeal         : removeMeal,
+                getModifiersPrice  : getModifiersPrice
             };
 
         return factory;
@@ -151,7 +152,7 @@
          * @description
          * Return cart list total price.
          *
-         * @return {number} Cart list total price.
+         * @return {string} Cart list total price.
          **/
         function getTotalPrice() {
             let totalPrice = 0;
