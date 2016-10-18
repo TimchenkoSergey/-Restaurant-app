@@ -61,7 +61,7 @@ gulp.task("templates", function () {
 
 gulp.task("ngdocs", [], function () {
 	gulp.src("js/MealsModule/**/*.js")
-		.pipe(gulpDocs.process())
+		.pipe(gulpDocs.process()) 
 		.pipe(gulp.dest("./docs"));
 });
 
