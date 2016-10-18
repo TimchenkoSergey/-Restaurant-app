@@ -13,10 +13,10 @@
 		 * @usage <meals-list></meals-list>
 		 **/
 		.component("mealsList", {
-			templateUrl : "component-templates/mealsList/template/mealsList.html",
-			bindings : {},
-			controllerAs : "mealsList",
-			controller : MealsListController
+			templateUrl: "component-templates/mealsList/template/mealsList.html",
+			bindings: {},
+			controllerAs: "mealsList",
+			controller: MealsListController
 		});
 
 	/**
@@ -33,7 +33,6 @@
 	function MealsListController(MealsFactory) {
 
 		const vm = this;
-
 
 		vm.openMeal = openMeal;
 		vm.currency = "";

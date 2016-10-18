@@ -19,12 +19,8 @@ module.exports = function(config) {
         "libs/angular/angular-ui-router.min.js",
         "libs/angular/angular-mocks.js",
         "js/MealsModule/main.js",
-        "js/MealsModule/services/cartFactory.js",
-        "js/MealsModule/services/cartFactory.spec.js",
-        "js/MealsModule/services/modifiersFactory.js",
-        "js/MealsModule/services/modifiersFactory.spec.js",
-        "js/MealsModule/services/mealsFactory.js",
-        "js/MealsModule/services/mealsFactory.spec.js"
+        "js/MealsModule/services/*.js",
+        "js/MealsModule/components/**/*.js"
     ],
 
 

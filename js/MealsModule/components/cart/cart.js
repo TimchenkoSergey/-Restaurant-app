@@ -13,10 +13,10 @@
          * @usage <cart-page></cart-page>
          **/
         .component("cartPage", {
-            templateUrl : "component-templates/cart/template/cartPage.html",
-            bindings : {},
-            controllerAs : "cart",
-            controller : CartController
+            templateUrl: "component-templates/cart/template/cartPage.html",
+            bindings: {},
+            controllerAs: "cart",
+            controller: CartController
         });
 
     /**

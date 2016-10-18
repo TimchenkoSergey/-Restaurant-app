@@ -13,10 +13,10 @@
          * @usage <error-page></error-page>
          **/
         .component("errorPage", {
-            templateUrl : "component-templates/error/template/errorPage.html",
-            bindings : {},
-            controllerAs : "error",
-            controller : ErrorController
+            templateUrl: "component-templates/error/template/errorPage.html",
+            bindings: {},
+            controllerAs: "error",
+            controller: ErrorController
         });
 
     /**

@@ -14,12 +14,12 @@
          * @usage <modifiers-page></modifiers-page>
          **/
         .component("modifiersPage", {
-            templateUrl : "component-templates/modifiers/template/modifiersPage.html",
-            bindings : {
+            templateUrl: "component-templates/modifiers/template/modifiersPage.html",
+            bindings: {
                 currency: "@"
             },
-            controllerAs : "mod",
-            controller : ModifiersController
+            controllerAs: "mod",
+            controller: ModifiersController
         });
 
     /**
@@ -38,10 +38,11 @@
         const vm                = this;
         let   selectedModifiers = [];
 
-        vm.modifiers      = MealsFactory.getModifiers();
-        vm.selectModifier = selectModifier;
+        vm.modifiers          = MealsFactory.getModifiers();
+        vm.selectModifier     = selectModifier;
+        vm.cleanPickModifiers = cleanPickModifiers;
 
-        cleanPickModifiers();
+        vm.cleanPickModifiers();
 
         if (MealsFactory.getCurrentMealStatus() === "edit") {
             //Pick checkboxes for select modifiers

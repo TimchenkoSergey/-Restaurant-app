@@ -13,10 +13,10 @@
          * @usage <drinks-list></drinks-list>
          **/
         .component("drinksList", {
-            templateUrl : "component-templates/drinksList/template/drinksList.html",
-            bindings : {},
-            controllerAs : "drinksList",
-            controller : DrinksListController
+            templateUrl: "component-templates/drinksList/template/drinksList.html",
+            bindings: {},
+            controllerAs: "drinksList",
+            controller: DrinksListController
         });
 
     /**
@@ -33,8 +33,8 @@
     function DrinksListController(MealsFactory) {
 
         const vm     = this;
-        let   drinks = [];
 
+        vm.drinks           = [];
         vm.onlySoftDrinks   = false;
         vm.currency         = "";
         vm.openDrink        = openDrink;
@@ -65,7 +65,7 @@
          **/
         function getDrinks(drinksObj) {
             vm.currency = drinksObj.currency;
-            drinks      = drinksObj.drinks;
+            vm.drinks   = drinksObj.drinks;
         }
 
         /**
@@ -93,10 +93,10 @@
         function getDrinksForView() {
 
             if (vm.onlySoftDrinks) {
-                return drinks.filter((item) => item.tipple !== true);
+                return vm.drinks.filter((item) => item.tipple !== true);
             }
             else {
-                return drinks;
+                return vm.drinks;
             }
         }
     }

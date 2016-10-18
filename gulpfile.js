@@ -30,7 +30,8 @@ gulp.task("js", function () {
 			"js/MealsModule/main.js",
 			"js/MealsModule/config.js",
 			"js/MealsModule/services/*.js",
-			"js/MealsModule/components/**/*.js"
+			"js/MealsModule/components/**/*.js",
+			"!js/MealsModule/**/*.spec.js"
 		])
 		.pipe(sourcemaps.init())
 		.pipe(babel({

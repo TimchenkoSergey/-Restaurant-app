@@ -14,12 +14,12 @@
          * @usage <select-count></select-count>
          **/
         .component("selectCount", {
-            templateUrl : "component-templates/selectCount/template/selectCountPage.html",
-            bindings : {
+            templateUrl: "component-templates/selectCount/template/selectCountPage.html",
+            bindings: {
                 select: "="
             },
-            controllerAs : "select",
-            controller : SelectCountController
+            controllerAs: "select",
+            controller: SelectCountController
         });
 
     /**

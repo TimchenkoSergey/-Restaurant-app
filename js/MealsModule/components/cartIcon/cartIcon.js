@@ -14,12 +14,12 @@
          * @usage <cart-icon-page></cart-icon-page>
          **/
         .component("cartIconPage", {
-            templateUrl : "component-templates/cartIcon/template/cartIconPage.html",
-            bindings : {
+            templateUrl: "component-templates/cartIcon/template/cartIconPage.html",
+            bindings: {
                 count: "@"
             },
-            controllerAs : "cartIcon",
-            controller : CartIconController
+            controllerAs: "cartIcon",
+            controller: CartIconController
         });
 
     /**

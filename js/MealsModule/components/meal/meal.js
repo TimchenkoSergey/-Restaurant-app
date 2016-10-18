@@ -14,12 +14,12 @@
 		 * @usage <meal-page></meal-page>
 		 **/
 		.component("mealPage", {
-			templateUrl : "component-templates/meal/template/mealPage.html",
-			bindings : {
+			templateUrl: "component-templates/meal/template/mealPage.html",
+			bindings: {
 				path: "@"
 			},
-			controllerAs : "meal",
-			controller : MealController
+			controllerAs: "meal",
+			controller: MealController
 		});
 
 	/**

@@ -13,10 +13,10 @@
          * @usage <main-page></main-page>
          **/
         .component("mainPage", {
-            templateUrl : "component-templates/main/template/mainPage.html",
-            bindings : {},
-            controllerAs : "main",
-            controller : MainController
+            templateUrl: "component-templates/main/template/mainPage.html",
+            bindings: {},
+            controllerAs: "main",
+            controller: MainController
         });
 
     /**

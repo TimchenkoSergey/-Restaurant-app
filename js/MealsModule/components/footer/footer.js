@@ -13,10 +13,10 @@
          * @usage <footer-page></footer-page>
          **/
         .component("footerPage", {
-            templateUrl : "component-templates/footer/template/footerPage.html",
-            bindings : {},
-            controllerAs : "footer",
-            controller : FooterController
+            templateUrl: "component-templates/footer/template/footerPage.html",
+            bindings: {},
+            controllerAs: "footer",
+            controller: FooterController
         });
 
     /**

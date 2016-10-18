@@ -13,10 +13,10 @@
          * @usage <header-page></header-page>
          **/
         .component("headerPage", {
-            templateUrl : "component-templates/header/template/headerPage.html",
-            bindings : {},
-            controllerAs : "header",
-            controller : HeaderController
+            templateUrl: "component-templates/header/template/headerPage.html",
+            bindings: {},
+            controllerAs: "header",
+            controller: HeaderController
         });
 
     /**

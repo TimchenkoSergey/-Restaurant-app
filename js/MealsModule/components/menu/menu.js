@@ -13,10 +13,10 @@
          * @usage <menu-page></menu-page>
          **/
         .component("menuPage", {
-            templateUrl : "component-templates/menu/template/menuPage.html",
-            bindings : {},
-            controllerAs : "menu",
-            controller : MenuController
+            templateUrl: "component-templates/menu/template/menuPage.html",
+            bindings: {},
+            controllerAs: "menu",
+            controller: MenuController
         });
 
     /**

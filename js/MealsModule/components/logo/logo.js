@@ -13,10 +13,10 @@
          * @usage <logo-page></logo-page>
          **/
         .component("logoPage", {
-            templateUrl : "component-templates/logo/template/logoPage.html",
-            bindings : {},
-            controllerAs : "logo",
-            controller : LogoController
+            templateUrl: "component-templates/logo/template/logoPage.html",
+            bindings: {},
+            controllerAs: "logo",
+            controller: LogoController
         });
 
     /**
