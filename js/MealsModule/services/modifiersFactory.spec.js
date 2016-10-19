@@ -78,23 +78,19 @@ describe("Meals module services, ", function () {
 
         it("should delete modifier if modifier has been selected else select modifier",
             function () {
-                let selectedModifiers = [];
-
-                ModifiersFactory.selectModifier(selectedModifiers, modifiers[0]);
-                
-                expect(selectedModifiers).toEqual([{ name: "first", price: 25, check: false }]);
+                expect(ModifiersFactory.selectModifier([], modifiers[0]))
+                    .toEqual([{ name: "first", price: 25, check: false }]);
         });
 
         it("should pick checked modifiers when meal status is 'edit'",
             function () {
 
-            ModifiersFactory.pickCheckedModifiers(modifiers, [],
-                [{ name: "first", price: 25, check: false }]);
-
-            expect(modifiers).toEqual([
-                { name: "first",  price: 25, check: true  },
-                { name: "second", price: 10, check: false },
-                { name: "third",  price: 15, check: false }
+            expect(ModifiersFactory.pickCheckedModifiers(
+                modifiers,
+                [{ name: "first", price: 25, check: false }]
+                ))
+                .toEqual([
+                { name: "first",  price: 25, check: true  }
             ]);
         });
     });

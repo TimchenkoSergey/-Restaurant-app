@@ -30,7 +30,7 @@ describe("Meals module components, ", function () {
                 MealsFactory.getModifiers();
                 ModifiersFactory.selectModifier([], {});
                 ModifiersFactory.getCheckedModifiers();
-                ModifiersFactory.pickCheckedModifiers([], [], []);
+                ModifiersFactory.pickCheckedModifiers([], []);
 
                 expect(MealsFactory.getModifiers).toHaveBeenCalled();
                 expect(ModifiersFactory.selectModifier).toHaveBeenCalled();

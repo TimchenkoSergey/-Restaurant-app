@@ -80,17 +80,21 @@
          *
          * @param {object[]} selectedModifiers Array with selected modifiers.
          * @param {object} modifier Modifier object.
+         * @return {object[]} Array with selected modifiers.
          **/
         function selectModifier(selectedModifiers, modifier) {
+            let selectedModif = selectedModifiers.slice();
 
-            if (!modifierHasBeenSelected(selectedModifiers, modifier)) {
-                selectedModifiers.push(modifier);
+            if (!modifierHasBeenSelected(selectedModif, modifier)) {
+                selectedModif.push(modifier);
             }
             else {
-                selectedModifiers = deleteModifier(selectedModifiers, modifier);
+                selectedModif = deleteModifier(selectedModif, modifier);
             }
 
-            CartFactory.addModifiersToList(selectedModifiers);
+            CartFactory.addModifiersToList(selectedModif);
+
+            return selectedModif;
         }
 
         /**
@@ -101,10 +105,11 @@
          * Pick all checked modifiers.
          *
          * @param {object[]} modifiers All modifiers of current meal.
-         * @param {object[]} selectedModifiers Array where will be placed modifiers.
          * @param {object[]} checkedModifiers Array with checked modifiers.
+         * @return {object[]} Array with checked and picked modifiers.
          **/
-        function pickCheckedModifiers(modifiers, selectedModifiers, checkedModifiers) {
+        function pickCheckedModifiers(modifiers, checkedModifiers) {
+            let selectedModif = [];
 
             if (checkedModifiers) {
                 for (let i = 0, lenCheckedModifiers = checkedModifiers.length; i < lenCheckedModifiers; i++) {
@@ -114,11 +119,12 @@
                         if (modifiers[j].name === checkedModifiers[i].name) {
 
                             modifiers[j].check = true;
-                            selectModifier(selectedModifiers, modifiers[j]);
+                            selectedModif.push(modifiers[j]);
                         }
                     }
                 }
             }
+            return selectedModif
         }
     }
 })();

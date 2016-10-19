@@ -47,7 +47,7 @@
         if (MealsFactory.getCurrentMealStatus() === "edit") {
             //Pick checkboxes for select modifiers
             let checkedModifiers = ModifiersFactory.getCheckedModifiers();
-            ModifiersFactory.pickCheckedModifiers(vm.modifiers, selectedModifiers, checkedModifiers);
+            selectedModifiers    = ModifiersFactory.pickCheckedModifiers(vm.modifiers, checkedModifiers);
         }
 
         /**
@@ -73,7 +73,7 @@
          * @param {object} modifier Modifier object.
          **/
         function selectModifier(modifier) {
-            ModifiersFactory.selectModifier(selectedModifiers, modifier);
+            selectedModifiers = ModifiersFactory.selectModifier(selectedModifiers, modifier);
         }
     }
 })();
